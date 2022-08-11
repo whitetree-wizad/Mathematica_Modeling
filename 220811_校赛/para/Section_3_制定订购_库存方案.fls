@@ -1,0 +1,6 @@
+PWD I:/git_liberary/Mathematica_Modeling/220811_У��/para
+INPUT d:/texlive/2020/texmf.cnf
+INPUT d:/texlive/2020/texmf-dist/web2c/texmf.cnf
+INPUT d:/texlive/2020/texmf-var/web2c/xetex/xelatex.fmt
+INPUT Section_3_制定订购_库存方案.tex
+OUTPUT Section_3_制定订购_库存方案.log

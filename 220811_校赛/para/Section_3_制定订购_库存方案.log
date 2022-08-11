@@ -1,0 +1,171 @@
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.10.20)  11 AUG 2022 11:58
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**Section_3_制定订购_库存方案.tex
+(./Section_3_制定订购_库存方案.tex
+LaTeX2e <2020-02-02> patch level 5
+L3 programming layer <2020-03-06>
+! Undefined control sequence.
+l.2 \section
+            {制定订购、库存方案}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 \section{制
+              定订购、库存方案}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no 制 in font nullfont!
+Missing character: There is no 定 in font nullfont!
+Missing character: There is no 订 in font nullfont!
+Missing character: There is no 购 in font nullfont!
+Missing character: There is no 、 in font nullfont!
+Missing character: There is no 库 in font nullfont!
+Missing character: There is no 存 in font nullfont!
+Missing character: There is no 方 in font nullfont!
+Missing character: There is no 案 in font nullfont!
+! Undefined control sequence.
+l.3 \subsection
+               {基于订货量的供货量确定}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no 基 in font nullfont!
+Missing character: There is no 于 in font nullfont!
+Missing character: There is no 订 in font nullfont!
+Missing character: There is no 货 in font nullfont!
+Missing character: There is no 量 in font nullfont!
+Missing character: There is no 的 in font nullfont!
+Missing character: There is no 供 in font nullfont!
+Missing character: There is no 货 in font nullfont!
+Missing character: There is no 量 in font nullfont!
+Missing character: There is no 确 in font nullfont!
+Missing character: There is no 定 in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 2--4
+[]
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5 在
+     生产厂家选择确定的供应商并发出订单后，供应商在其供货能力范围内将尽可能按照订货量进行供货，实际供货量受其自身供货能力的影响；为了模拟现实中供货...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no 在 in font nullfont!
+Missing character: There is no 生 in font nullfont!
+Missing character: There is no 产 in font nullfont!
+Missing character: There is no 厂 in font nullfont!
+Missing character: There is no 家 in font nullfont!
+Missing character: There is no 选 in font nullfont!
+Missing character: There is no 择 in font nullfont!
+Missing character: There is no 确 in font nullfont!
+Missing character: There is no 定 in font nullfont!
+Missing character: There is no 的 in font nullfont!
+Missing character: There is no 供 in font nullfont!
+Missing character: There is no 应 in font nullfont!
+Missing character: There is no 商 in font nullfont!
+Missing character: There is no 并 in font nullfont!
+Missing character: There is no 发 in font nullfont!
+Missing character: There is no 出 in font nullfont!
+Missing character: There is no 订 in font nullfont!
+Missing character: There is no 单 in font nullfont!
+Missing character: There is no 后 in font nullfont!
+Missing character: There is no ， in font nullfont!
+Missing character: There is no 供 in font nullfont!
+Missing character: There is no 应 in font nullfont!
+Missing character: There is no 商 in font nullfont!
+Missing character: There is no 在 in font nullfont!
+Missing character: There is no 其 in font nullfont!
+Missing character: There is no 供 in font nullfont!
+Missing character: There is no 货 in font nullfont!
+Missing character: There is no 能 in font nullfont!
+Missing character: There is no 力 in font nullfont!
+Missing character: There is no 范 in font nullfont!
+Missing character: There is no 围 in font nullfont!
+Missing character: There is no 内 in font nullfont!
+Missing character: There is no 将 in font nullfont!
+Missing character: There is no 尽 in font nullfont!
+Missing character: There is no 可 in font nullfont!
+Missing character: There is no 能 in font nullfont!
+Missing character: There is no 按 in font nullfont!
+Missing character: There is no 照 in font nullfont!
+Missing character: There is no 订 in font nullfont!
+Missing character: There is no 货 in font nullfont!
+Missing character: There is no 量 in font nullfont!
+Missing character: There is no 进 in font nullfont!
+Missing character: There is no 行 in font nullfont!
+Missing character: There is no 供 in font nullfont!
+Missing character: There is no 货 in font nullfont!
+Missing character: There is no ， in font nullfont!
+Missing character: There is no 实 in font nullfont!
+Missing character: There is no 际 in font nullfont!
+Missing character: There is no 供 in font nullfont!
+Missing character: There is no 货 in font nullfont!
+Missing character: There is no 量 in font nullfont!
+Missing character: There is no 受 in font nullfont!
+Missing character: There is no 其 in font nullfont!
+Missing character: There is no 自 in font nullfont!
+Missing character: There is no 身 in font nullfont!
+Missing character: There is no 供 in font nullfont!
+Missing character: There is no 货 in font nullfont!
+Missing character: There is no 能 in font nullfont!
+Missing character: There is no 力 in font nullfont!
+Missing character: There is no 的 in font nullfont!
+Missing character: There is no 影 in font nullfont!
+Missing character: There is no 响 in font nullfont!
+Missing character: There is no ； in font nullfont!
+Missing character: There is no 为 in font nullfont!
+Missing character: There is no 了 in font nullfont!
+Missing character: There is no 模 in font nullfont!
+Missing character: There is no 拟 in font nullfont!
+Missing character: There is no 现 in font nullfont!
+Missing character: There is no 实 in font nullfont!
+Missing character: There is no 中 in font nullfont!
+Missing character: There is no 供 in font nullfont!
+Missing character: There is no 货 in font nullfont!
+Missing character: There is no 量 in font nullfont!
+Missing character: There is no 的 in font nullfont!
+Missing character: There is no 波 in font nullfont!
+Missing character: There is no 动 in font nullfont!
+Missing character: There is no 情 in font nullfont!
+Missing character: There is no 况 in font nullfont!
+Missing character: There is no ， in font nullfont!
+Missing character: There is no 本 in font nullfont!
+Missing character: There is no 文 in font nullfont!
+Missing character: There is no 令 in font nullfont!
+Missing character: There is no 实 in font nullfont!
+Missing character: There is no 际 in font nullfont!
+Missing character: There is no 供 in font nullfont!
+Missing character: There is no 货 in font nullfont!
+Missing character: There is no 量 in font nullfont!
+Missing character: There is no 偏 in font nullfont!
+Missing character: There is no 差 in font nullfont!
+Missing character: There is no 符 in font nullfont!
+Missing character: There is no 合 in font nullfont!
+Missing character: There is no 该 in font nullfont!
+Missing character: There is no 供 in font nullfont!
+Missing character: There is no 货 in font nullfont!
+Missing character: There is no 商 in fon

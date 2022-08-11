@@ -2665,9 +2665,6 @@
     <bcf:datasource type="file" datatype="bibtex">reference.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1">李鹏2018基于长短期记忆的实时电价条件下智能电网短期负荷预测</bcf:citekey>
-    <bcf:citekey order="2">lecun2015deep</bcf:citekey>
-    <bcf:citekey order="3">王鑫2018基于</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
