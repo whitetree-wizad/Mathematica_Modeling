@@ -362,6 +362,12 @@ INPUT d:/texlive/2020/texmf-dist/tex/latex/biblatex/cbx/numeric-comp.cbx
 INPUT d:/texlive/2020/texmf-dist/tex/latex/biblatex/cbx/numeric-comp.cbx
 INPUT d:/texlive/2020/texmf-dist/tex/latex/biblatex/biblatex.cfg
 INPUT d:/texlive/2020/texmf-dist/tex/latex/biblatex/biblatex.cfg
+INPUT d:/texlive/2020/texmf-dist/tex/latex/algorithms/algorithm.sty
+INPUT d:/texlive/2020/texmf-dist/tex/latex/algorithms/algorithm.sty
+INPUT d:/texlive/2020/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
+INPUT d:/texlive/2020/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
+INPUT d:/texlive/2020/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
+INPUT d:/texlive/2020/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
 INPUT d:/texlive/2020/texmf-dist/tex/xelatex/xecjk/xeCJK-listings.sty
 INPUT d:/texlive/2020/texmf-dist/tex/xelatex/xecjk/xeCJK-listings.sty
 INPUT !main.aux
@@ -386,8 +392,8 @@ OUTPUT !main.bcf
 INPUT !main.bbl
 INPUT !main.bbl
 INPUT !main.bbl
-INPUT para/Section_3_制定订购_库存方案.tex
-INPUT para/Section_3_制定订购_库存方案.tex
+INPUT para/Section_2_预测未来供货量.tex
+INPUT para/Section_2_预测未来供货量.tex
 INPUT d:/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
 INPUT d:/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmmi8.tfm
 INPUT d:/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm
@@ -420,6 +426,10 @@ INPUT d:/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT d:/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
 INPUT d:/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
 OUTPUT !main.xdv
+INPUT Image/lstm.eps
+INPUT Image/lstm.eps
+INPUT Image/comparison.eps
+INPUT Image/comparison.eps
 INPUT !main.aux
 INPUT ./!main.out
 INPUT ./!main.out

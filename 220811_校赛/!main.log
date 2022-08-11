@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.10.20)  11 AUG 2022 12:04
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.10.20)  11 AUG 2022 15:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1666,15 +1666,49 @@ Package biblatex Info: ... file 'biblatex.cfg' found.
 
 (d:/texlive/2020/texmf-dist/tex/latex/biblatex/biblatex.cfg
 File: biblatex.cfg 
-)))
-\@quotelevel=\count515
-\@quotereset=\count516
+))
+(d:/texlive/2020/texmf-dist/tex/latex/algorithms/algorithm.sty
+Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+\@float@every@algorithm=\toks46
+\c@algorithm=\count515
+)
+(d:/texlive/2020/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
+Package: algpseudocode 
 
-(d:/texlive/2020/texmf-dist/tex/xelatex/xecjk/xeCJK-listings.sty
+(d:/texlive/2020/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
+Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
+
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+\c@ALG@line=\count516
+\c@ALG@rem=\count517
+\c@ALG@nested=\count518
+\ALG@tlm=\skip266
+\ALG@thistlm=\skip267
+\c@ALG@Lnr=\count519
+\c@ALG@blocknr=\count520
+\c@ALG@storecount=\count521
+\c@ALG@tmpcounter=\count522
+\ALG@tmplength=\skip268
+)
+Document Style - pseudocode environments for use with the `algorithmicx' style
+))
+\@quotelevel=\count523
+\@quotereset=\count524
+ (d:/texlive/2020/texmf-dist/tex/xelatex/xecjk/xeCJK-listings.sty
 Package: xeCJK-listings 2020/02/18 v3.8.2 xeCJK patch file for listings
-\l__xeCJK_listings_max_char_int=\count517
-\l__xeCJK_listings_flag_int=\count518
-) (./!main.aux)
+\l__xeCJK_listings_max_char_int=\count525
+\l__xeCJK_listings_flag_int=\count526
+)
+(./!main.aux
+
+LaTeX Warning: Label `lstm' multiply defined.
+
+
+LaTeX Warning: Label `lstm@cref' multiply defined.
+
+)
 \openout1 = `!main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
@@ -1697,7 +1731,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 3.
 LaTeX Font Info:    ... okay on input line 3.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 3.
 LaTeX Font Info:    ... okay on input line 3.
-ABD: EverySelectfont initializing macros
+ ABD: EverySelectfont initializing macros
 LaTeX Info: Redefining \selectfont on input line 3.
 
 Package fontspec Info: Adjusting the maths setup (use [no-math] to avoid
@@ -1797,7 +1831,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\c@lstlisting=\count519
+\c@lstlisting=\count527
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
@@ -1812,7 +1846,7 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 (d:/texlive/2020/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count520
+\c@section@level=\count528
 )
 LaTeX Info: Redefining \ref on input line 3.
 LaTeX Info: Redefining \pageref on input line 3.
@@ -1844,7 +1878,7 @@ Package biblatex Info: ... file '!main.bbl' found.
 Package biblatex Info: Reference section=0 on input line 3.
 Package biblatex Info: Reference segment=0 on input line 3.
 
-(./para/Section_3_制定订购_库存方案.tex
+(./para/Section_2_预测未来供货量.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\leavevmode@ifvmode' on input line 3.
@@ -1863,70 +1897,89 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.00876pt
 (hyperref)                removed on input line 3.
 
-LaTeX Font Info:    Calculating math sizes for size <12.05> on input line 8.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 8.
+LaTeX Font Info:    Calculating math sizes for size <12.05> on input line 9.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 9.
 (d:/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 8.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 9.
 
 (d:/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
+) [1
+
+]
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
+put line 86.
+File: Image/lstm.eps Graphic file (type eps)
+<Image/lstm.eps>
+ [2]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\leavevmode@ifvmode' on input line 19.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 19.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\leavevmode@ifvmode' on input line 19.
+(hyperref)                removing `\leavevmode@ifvmode' on input line 128.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 19.
+(hyperref)                removed on input line 128.
 
 
-LaTeX Warning: Reference `选优' on page 1 undefined on input line 47.
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\leavevmode@ifvmode' on input line 128.
 
-)
 
-LaTeX Warning: Empty bibliography on input line 13.
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 2.00876pt
+(hyperref)                removed on input line 128.
 
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\leavevmode@ifvmode' on input line 150.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 2.00876pt
+(hyperref)                removed on input line 150.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\leavevmode@ifvmode' on input line 150.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 2.00876pt
+(hyperref)                removed on input line 150.
+
+File: Image/comparison.eps Graphic file (type eps)
+<Image/comparison.eps>
+[3])
 
 Package caption Warning: Unused \captionsetup[sub] on input line 9.
 See the caption package documentation for explanation.
 
-[1
-
-] [2]
+[4]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 14.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 14.
  (./!main.aux)
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 14.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 14.
 Package rerunfilecheck Info: File `!main.out' has not changed.
-(rerunfilecheck)             Checksum: 1FAA48CD3FA7F5CB40A2FF08FAF01153;432.
+(rerunfilecheck)             Checksum: DD71E88CC7A9E699562E877E38AF5F9E;551.
 
 
-LaTeX Warning: There were undefined references.
+LaTeX Warning: There were multiply-defined labels.
 
 Package logreq Info: Writing requests to '!main.run.xml'.
 \openout1 = `!main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 40648 strings out of 479418
- 823067 string characters out of 5888104
- 1635261 words of memory out of 5000000
- 57474 multiletter control sequences out of 15000+600000
- 540581 words of font info for 99 fonts, out of 8000000 for 9000
+ 41410 strings out of 479418
+ 836665 string characters out of 5888104
+ 1643136 words of memory out of 5000000
+ 58220 multiletter control sequences out of 15000+600000
+ 540589 words of font info for 100 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 76i,16n,88p,1150b,779s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 76i,7n,88p,1150b,4618s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on !main.xdv (2 pages, 17076 bytes).
+Output written on !main.xdv (4 pages, 41948 bytes).

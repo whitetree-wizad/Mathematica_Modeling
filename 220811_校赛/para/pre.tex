@@ -21,6 +21,12 @@ style=gb7714-2015,
 backend=biber,
 ]{biblatex}
 
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{amsmath}
+\renewcommand{\algorithmicrequire}{\textbf{Input:}}  % Use Input in the format of Algorithm
+\renewcommand{\algorithmicensure}{\textbf{Output:}} % Use Output in the format of Algorithm
+
 \addbibresource{reference.bib} %BibTeX数据文件及位置
 \title{生产企业原材料的订购与运输}
 \tihao{C}

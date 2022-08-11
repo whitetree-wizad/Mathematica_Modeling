@@ -66,21 +66,47 @@ h^{t-1}
 \\
 (2)单元状态
 \begin{equation}
-c^t=f^tc^{t-1}+i^t\check{c}^t
+c^t=f^tc^{t-1}+i^t\check{c}^t.
 \end{equation}
 \\
 (3)隐藏状态
 \begin{equation}
-   h^t=o^ttanh(c^t)
+   h^t=o^ttanh(c^t).
 \end{equation}
 最终节点的输出$y^t$也是由$h^t$变化而成的，本文使用的是
 \begin{equation}
-y^t=\sigma(\omega'h^t)
+y^t=\sigma(\omega'h^t),
 \end{equation}
+在后文中，使用$\psi_{i j}$以表示，即通过预测得到的第$i$周第$j$家供应商的供应量。
 
 
-本文的LSTM是由PyTorch实现的，可由图？？？表示……（后续解释用詹桑的md补全。注意讲清具体输入输出时的$x^t$会代入什么？$y^t$是什么，有什么含义？）
+本文的LSTM是由PyTorch实现的，结构如图？？？所示：
 
+\begin{algorithm}[htb]
+  \caption{ Long short-term memory for out model.}
+  \label{alg:lstm}
+  \begin{algorithmic}[1]
+    \Require
+      从原始数据中获取原始的订购与供应数据;
+      从原始数据中挑取前一步筛选的44家供应商信息;
+    \Ensure
+      第$i$周第$j$家供应商的预测值$\psi_{i j}$;
+    \State 对数据的A、B、C分类，做均一化预处理;
+
+    \State 将数据按供应商拆分为一维时间序列数据;
+
+    \State 将一维时间序列数据先按时间窗口切分为二维数据，以同样的方法，再将每个时间窗口中的数据切分为特征向量;
+
+    \State 对升维后的数据做一次正态标准化缩放，保存缩放参数;
+
+    \State 将处理后的数据送入LSTM网络，训练完毕后，返回神经网络;
+
+    \State 每次预测1周，将预测的得到的1周数据重新送入神经网络，迭代指定此时以得到相应的预测步数;
+
+    \State 使用保存的缩放数据，将预测数据复原。\\
+    \Return $\psi_{i j}$.
+  \end{algorithmic}
+\end{algorithm}
 
 \begin{center} {\centering
 \vbox{
@@ -114,7 +140,7 @@ y^t=\sigma(\omega'h^t)
 % 且一般该周的供货量也较多。
 进而定义该家供货商的修正比$\alpha_j$：
 \begin{equation}
-    \alpha_j=\frac{\beta_j-\gamma_j}{\gamma_j}
+    \alpha_j=\frac{\beta_j-\gamma_j}{\gamma_j},
 \end{equation}
 \noindent 在第$j$家供应商的历史数据中，当供货量超过订货量时供货量的平均值记为$B_n$，而$c_n$为当供货量小于订货量时供货量的平均值。
 
