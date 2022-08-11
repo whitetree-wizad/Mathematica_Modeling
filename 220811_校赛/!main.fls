@@ -1,4 +1,4 @@
-PWD D:/onedrive/桌面/格式化
+PWD I:/git_liberary/Mathematica_Modeling/220811_校赛
 INPUT d:/texlive/2020/texmf.cnf
 INPUT d:/texlive/2020/texmf-dist/web2c/texmf.cnf
 INPUT d:/texlive/2020/texmf-var/web2c/xetex/xelatex.fmt
@@ -419,9 +419,9 @@ INPUT d:/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy7.tfm
 INPUT d:/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT d:/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
 INPUT d:/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
-INPUT Image/lstm.eps
-INPUT Image/lstm.eps
 OUTPUT !main.xdv
+INPUT Image/lstm.eps
+INPUT Image/lstm.eps
 INPUT Image/comparison.eps
 INPUT Image/comparison.eps
 INPUT !main.aux
