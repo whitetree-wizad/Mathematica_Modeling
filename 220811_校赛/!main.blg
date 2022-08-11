@@ -1,17 +1,17 @@
 [0] Config.pm:304> INFO - This is Biber 2.14
 [0] Config.pm:307> INFO - Logfile is '!main.blg'
-[65] biber-MSWIN32:322> INFO - === 
-[83] Biber.pm:415> INFO - Reading '!main.bcf'
-[224] Biber.pm:943> INFO - Found 8 citekeys in bib section 0
-[241] Biber.pm:4256> INFO - Processing section 0
-[241] Utils.pm:75> INFO - Globbing data source 'reference.bib'
-[251] Utils.pm:91> INFO - Globbed data source 'reference.bib' to reference.bib
-[263] Biber.pm:4455> INFO - Looking for bibtex format file 'reference.bib' for section 0
-[267] bibtex.pm:1653> INFO - LaTeX decoding ...
-[293] bibtex.pm:1471> INFO - Found BibTeX data source 'reference.bib'
-[386] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[387] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[387] Biber.pm:4084> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
-[387] Biber.pm:4090> INFO - No sort tailoring available for locale 'en-US'
-[393] bbl.pm:652> INFO - Writing '!main.bbl' with encoding 'UTF-8'
-[397] bbl.pm:755> INFO - Output to !main.bbl
+[66] biber-MSWIN32:322> INFO - === 
+[89] Biber.pm:415> INFO - Reading '!main.bcf'
+[230] Biber.pm:943> INFO - Found 8 citekeys in bib section 0
+[247] Biber.pm:4256> INFO - Processing section 0
+[247] Utils.pm:75> INFO - Globbing data source 'reference.bib'
+[260] Utils.pm:91> INFO - Globbed data source 'reference.bib' to reference.bib
+[272] Biber.pm:4455> INFO - Looking for bibtex format file 'reference.bib' for section 0
+[277] bibtex.pm:1653> INFO - LaTeX decoding ...
+[295] bibtex.pm:1471> INFO - Found BibTeX data source 'reference.bib'
+[391] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[392] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[392] Biber.pm:4084> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[392] Biber.pm:4090> INFO - No sort tailoring available for locale 'en-US'
+[398] bbl.pm:652> INFO - Writing '!main.bbl' with encoding 'UTF-8'
+[403] bbl.pm:755> INFO - Output to !main.bbl

@@ -491,6 +491,8 @@ INPUT Image/final test.eps
 INPUT Image/final test.eps
 INPUT para/Section_5_原材料的订购和转运方案扩展.tex
 INPUT para/Section_5_原材料的订购和转运方案扩展.tex
+INPUT para/Section_6_企业产能上限优化.tex
+INPUT para/Section_6_企业产能上限优化.tex
 INPUT !main.aux
 INPUT ./!main.out
 INPUT ./!main.out
