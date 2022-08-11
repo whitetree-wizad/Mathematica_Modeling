@@ -21,6 +21,14 @@
 问题3中企业计划尽量多地采购A类原材料，所以迫切需要制定合理的运输方案，以确保转运商的转运损耗率尽量少，来达到压缩生产成本的目的。
 问题2中侧重于经济效益，要求损耗最少，而问题3要求转运损耗率尽量少，因此对问题2中的0$\textendash$1规划模型稍加改动：
 
-
+\begin{equation}
+\begin{array}{l}
+\min \sum_{l=1}^{8}\left(\iota_{l} \sum_{j=1}^{44} \rho_{i j l} \psi_{i j}\right) \\
+\text { s.t. }\left\{\begin{array}{l}
+\sum_{i=1}^{8} \rho_{i j l}=1 \\
+\sum_{j=1}^{44} \rho_{i j l} \psi i_{i j} \leq 6000
+\end{array}\right.
+\end{array}
+\end{equation}
 
 式中$L'_i$代表第$i$周的转运损耗量，由于希望转运损耗率尽量少，故此处转运损耗量应取最小值。
