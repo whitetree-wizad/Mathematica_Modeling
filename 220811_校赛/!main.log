@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.10.20)  11 AUG 2022 15:04
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.10.20)  11 AUG 2022 19:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1701,14 +1701,7 @@ Package: xeCJK-listings 2020/02/18 v3.8.2 xeCJK patch file for listings
 \l__xeCJK_listings_max_char_int=\count525
 \l__xeCJK_listings_flag_int=\count526
 )
-(./!main.aux
-
-LaTeX Warning: Label `lstm' multiply defined.
-
-
-LaTeX Warning: Label `lstm@cref' multiply defined.
-
-)
+(./!main.aux)
 \openout1 = `!main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
@@ -1878,108 +1871,87 @@ Package biblatex Info: ... file '!main.bbl' found.
 Package biblatex Info: Reference section=0 on input line 3.
 Package biblatex Info: Reference segment=0 on input line 3.
 
-(./para/Section_2_预测未来供货量.tex
+(./para/Section_5_原材料的订购和转运方案扩展.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\leavevmode@ifvmode' on input line 3.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 3.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\leavevmode@ifvmode' on input line 3.
+(hyperref)                removing `\leavevmode@ifvmode' on input line 6.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 3.
+(hyperref)                removed on input line 6.
 
-LaTeX Font Info:    Calculating math sizes for size <12.05> on input line 9.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 9.
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\leavevmode@ifvmode' on input line 6.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 2.00876pt
+(hyperref)                removed on input line 6.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\leavevmode@ifvmode' on input line 18.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 2.00876pt
+(hyperref)                removed on input line 18.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\leavevmode@ifvmode' on input line 18.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 2.00876pt
+(hyperref)                removed on input line 18.
+
+LaTeX Font Info:    Calculating math sizes for size <12.05> on input line 22.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 22.
+
 (d:/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 9.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 22.
+
 
 (d:/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1
+)
 
-]
-Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 86.
-File: Image/lstm.eps Graphic file (type eps)
-<Image/lstm.eps>
- [2]
+LaTeX Warning: Command \textendash invalid in math mode on input line 22.
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\leavevmode@ifvmode' on input line 128.
+)
 
+LaTeX Warning: Empty bibliography on input line 14.
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 128.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\leavevmode@ifvmode' on input line 128.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 128.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\leavevmode@ifvmode' on input line 150.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 150.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\leavevmode@ifvmode' on input line 150.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 150.
-
-File: Image/comparison.eps Graphic file (type eps)
-<Image/comparison.eps>
-[3])
 
 Package caption Warning: Unused \captionsetup[sub] on input line 9.
 See the caption package documentation for explanation.
 
-[4]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 14.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 14.
+[1
+
+]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 15.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 15.
  (./!main.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 14.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 14.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 15.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 15.
 Package rerunfilecheck Info: File `!main.out' has not changed.
-(rerunfilecheck)             Checksum: DD71E88CC7A9E699562E877E38AF5F9E;551.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
+(rerunfilecheck)             Checksum: BBC5BA6B2D04E821FACA1BF6A3189425;424.
 Package logreq Info: Writing requests to '!main.run.xml'.
 \openout1 = `!main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 41410 strings out of 479418
- 836665 string characters out of 5888104
- 1643136 words of memory out of 5000000
- 58220 multiletter control sequences out of 15000+600000
- 540589 words of font info for 100 fonts, out of 8000000 for 9000
+ 41090 strings out of 479418
+ 826817 string characters out of 5888104
+ 1639330 words of memory out of 5000000
+ 57908 multiletter control sequences out of 15000+600000
+ 540557 words of font info for 96 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 76i,7n,88p,1150b,4618s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 76i,5n,88p,1150b,779s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on !main.xdv (4 pages, 41948 bytes).
+Output written on !main.xdv (1 page, 13416 bytes).

@@ -392,8 +392,8 @@ OUTPUT !main.bcf
 INPUT !main.bbl
 INPUT !main.bbl
 INPUT !main.bbl
-INPUT para/Section_2_预测未来供货量.tex
-INPUT para/Section_2_预测未来供货量.tex
+INPUT para/Section_5_原材料的订购和转运方案扩展.tex
+INPUT para/Section_5_原材料的订购和转运方案扩展.tex
 INPUT d:/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
 INPUT d:/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmmi8.tfm
 INPUT d:/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm
@@ -426,10 +426,6 @@ INPUT d:/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT d:/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
 INPUT d:/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
 OUTPUT !main.xdv
-INPUT Image/lstm.eps
-INPUT Image/lstm.eps
-INPUT Image/comparison.eps
-INPUT Image/comparison.eps
 INPUT !main.aux
 INPUT ./!main.out
 INPUT ./!main.out
