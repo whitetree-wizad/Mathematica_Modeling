@@ -56,22 +56,26 @@ $p_1$为单位产品的售价，则$p_1\eta$为企业24周的生产所得；$p_2
 在实际转运过程中，原材料会有一定的损耗,损耗量占供货量的百分比称为“损耗率”。
 通常情况下，一家供应商每周供应的原材料尽量由一家转运商运输。
 为体现供应商S$j$选择的转运商T$l$，引入0—1变量
-% \begin{equation}
-%     \rho_{ijl}}=\left\{\begin{array}{l}
-% 0, , \\
-% 1}, ;
-% \end{array}\right.
-% \end{equation}
+\begin{equation}
+\rho_{j l}=\left\{\begin{array}{l}
+0,\quad  \text { 第 } i \text { 周供应商 } S_j \text { 末选择转运商 } T_l \text { 运输原材料 }, \\
+1,\quad  \text { 第 } i \text { 周供应商 } S_j \text { 选择转运商 } T_l \text { 运输原材料 };
+\end{array}\right.
+\end{equation}
 假设同一家转运商T$l$的损耗率总是恒定的$\iota_l$，则有：
 \begin{equation}
-\begin{split}
-{\bf max}\quad &L_i=\sum_{l=1}^{8}(\iota_l\sum_{j=1}^{44}\rho_{ijl}\psi_{ij}p_3 \\
-{\bf s.t.}\quad &\sum_{l=1}^{8}\rho_{ijl} =1
-\end{split}
+\begin{array}{l}
+\min \sum_{l=1}^{8}\left(\iota_{l} \sum_{j=1}^{44} \rho_{i j l} \psi_{i j}\right) \\
+\text { s.t. }\left\{\begin{array}{l}
+\sum_{i=1}^{8} \rho_{i j l}=1 \\
+\sum_{j=1}^{44} \rho_{i j l} \psi i_{i j} \leq 6000
+\end{array}\right.
+\end{array}
 \end{equation}
 式中$p_3$是原材料的采购单价，根据供应商贩卖的原材料类型确定。
 目标函数$L_i$是第$i$周的损失价值，故希望最小。
-该0—1规划模型每周运筹一次，制定该周的转运方案。
+该0$\textemdash$1规划模型每周运筹一次，制定该周的转运方案。
 约束条件表示一家供应商每周供应的原材料只由一家转运商运输，且每家转运商的运输原料的能力为6000立方米/周。
 事实上，根据预测模型，发现有的供应商单周供应量大于6000立方米，此时便无法只由一家转运商运输了。
 但这种情况发生次数较少，通过手工分配后，转运效果整体良好。
+
