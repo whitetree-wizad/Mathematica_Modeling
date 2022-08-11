@@ -22,61 +22,61 @@
 为了对供应商的的供货特征进行量化分析，建立合理的评价模型，本文首先选取了以下的指标：
 \begin{enumerate}
 
-\item 订货次数$W_n$:
+\item 订货次数$N_j$:
 
 订货次数表示供应商过去5年向生产企业供货的次数，直接反映出该企业对其的依赖程度。
-订货次数$W_n$越大，表示企业对该供应商越认可。
+订货次数$N_j$越大，表示企业对该供应商越认可。
 \begin{equation}
-    \eta_{\omega}=
+    \nu_{ij}=
 \begin{cases}
-0,& \text{供应商$???$在第$\omega$ 周没有订单,}
+0,& \text{供应商S$j$在第$i$ 周没有订单,}
 \\
-1,& \text{供应商$???$在第$\omega$ 周接到订单;}
+1,& \text{供应商S$j$在第$i$ 周接到订单;}
 \end{cases}
 \end{equation}
-\noindent 上式中，$\eta_{\omega}$是表示某供应商在该周是否接到订单的逻辑变量。通过累加求和，得到定货次数
+\noindent 上式中，$\nu_{ij}$是表示某供应商在该周是否接到订单的逻辑变量。通过累加求和，得到定货次数
 \begin{equation}
-    W_n=\sum_{\omega=001}^{240}\eta_{\omega,n}.
+    N_j=\sum_{i=001}^{240}\nu_{ij}.
 \end{equation}
 
-\item 供应商$S_n(n=001,002,\cdots,402)$近五年企业的订货总量$x_{sum,n}$
+\item 供应商S$j(j=001,002,\cdots,402)$近五年企业的订货总量$\varkappa_j$
 
-企业会向重要的供货商订购大量货物。$x_{sum,n}$大的供应商更受企业欢迎，对企业的重要性强。对于供应商$S_n$，有
+企业会向重要的供货商订购大量货物。$\varkappa_j$大的供应商更受企业欢迎，对企业的重要性强。对于供应商S$j$，有
 \begin{equation}
-    x_{sum,n}=\sum_{\omega=001}^{240}x_{\omega,n},
+    \varkappa_j=\sum_{i=001}^{240}\chi_{ij},
 \end{equation}
-其中，$x_{\omega,n}$是第$\omega$周，供货商$S_n$接到的订货量。
+其中，$\chi_{ij}$是第$i$周，供货商S$j$接到的订货量。
 
-\item 供应商$S_n(n=001,002,\cdots,402)$近五年企业的供货总量$y_{sum,n}$
+\item 供应商S$j(j=001,002,\cdots,402)$近五年企业的供货总量$\Psi_j$
 
-供应商的供货量能反映供货量的供应能力，供应能力强的供货商能有力地保障企业生产，所以$y_{sum,n}$越大，相应的供货商越重要，与$x_{sum,n}$类似
+供应商的供货量能反映供货量的供应能力，供应能力强的供货商能有力地保障企业生产，所以$\Psi_j$越大，相应的供货商越重要，与$\varkappa_j$类似
 \begin{equation}
-    y_{sum,n}=\sum_{\omega=001}^{240}y_{\omega,n},
+    \Psi_j=\sum_{i=001}^{240}\psi_{ij},
 \end{equation}
-其中，$y_{\omega,n}$是第$\omega$周，供货商$S_n$对企业的供货量。
+其中，$\psi_{ij}$是第$i$周，供货商S$j$对企业的供货量。
 
-\item 平均供货偏差$\varepsilon_n$:
+\item 平均供货偏差$\varepsilon_j$:
 
-对企业来讲，越能按照订货量进行供货的供应商是越优质的。我们选择供货量和订货量的差占订货量的比值，表征供货偏差，即供应商$S_n$在第$\omega$周的供货偏差为
+对企业来讲，越能按照订货量进行供货的供应商是越优质的。我们选择供货量和订货量的差占订货量的比值，表征供货偏差，即供应商S$j$在第$i$周的供货偏差为
 \begin{equation}
-    \varepsilon_{\omega,n}=\frac{x_{\omega,n}-y_{\omega,n}}{x_{\omega,n}},
+    \varepsilon_{ij}=\frac{\chi_{ij}-\psi_{ij}}{\chi_{ij}},
 \end{equation}
-而平均供货偏差$\varepsilon_n$应为$\varepsilon_{\omega,n}$的绝对值的平均值，即
+而平均供货偏差$\varepsilon_j$应为$\varepsilon_{ij}$的绝对值的平均值，即
 \begin{equation}
-    \varepsilon_n=\frac{\sum_{\omega=001}^{240}|\varepsilon_{\omega,n}|}{W_n}.
+    \varepsilon_j=\frac{\sum_{i=001}^{240}|\varepsilon_{ij}|}{N_j}.
 \end{equation}
 
 进而本文得到了供应商在供货时绝对偏差量的期望值
 \begin{equation}
-    E_n=x_{\omega,n} \times \varepsilon_n.
+    E_j=\chi_{ij} \times \varepsilon_j.
 \end{equation}
 
-\item 单次最大供应量$x_{n,max}$:
+\item 单次最大供应量$\Psi'_j$:
 
 如果供应商能一次性向企业提供大量原材料，其就能在一定程度上向企业证明其的供应能力强大，更适合成为对于企业重要的供应商。
-即单次最大供应量$x_{n,max}$越大，相对的供应商越重要
+即单次最大供应量$\Psi'_j$越大，相对的供应商越重要
 \begin{equation}
-    x_{n,max}=max \{ x_{1,n},x_{2,n},\dots,x_{240,n} \}.
+    \Psi'_j=max \{ \psi_{1j},\psi_{2j},\dots,\psi_{240j} \}.
 \end{equation}
 
 \end{enumerate}
@@ -108,56 +108,56 @@ TOPSIS法对样本数据无特殊要求,并且能清晰地反映各方案的差�
 
 \item 构造原始数据矩阵
 
-${\text{\bf B}}={(b_{n,m})}_{(402 \times 5)}$（用$b_{n,m}$指代各供应商的评价值），将以上五个指标放入以下矩阵。
+${\text{\bf A}}={(a_{jk})}_{402 \times 5}$（用$a_{jk}$指代各供应商的评价值），将以上五个指标放入以下矩阵。
 \begin{equation}       %开始数学环境
 \left(                 %左括号
   \begin{array}{cccc}
     W_1 & W_2 & \dots & W_{402}\\
-    x_{sum,1} & x_{sum,2} & \dots & x_{sum,402}\\
-    y_{sum,1} & y_{sum,2} & \dots & y_{sum,402}\\
-    \varepsilon_{\omega,1} & \varepsilon_{\omega,2} & \dots & \varepsilon_{\omega,402} \\
-    x_{1,max} & x_{2,max} & \dots & x_{402,max} \\
+    \varkappa_1 & \varkappa_2 & \dots & \varkappa_402\\
+    \Psi_1 & \Psi_2 & \dots & \Psi_402\\
+    \varepsilon_1 & \varepsilon_2 & \dots & \varepsilon_402 \\
+    N_1 & N_2 & \dots & N_402 \\
   \end{array}
 \right)                 %右括号
 \end{equation}
 
 \item 规范化属性值
 
-得到数据矩阵$\bf A$ $ =(a_{n,m})_{(402 \times 5)}$，为了使每个属性变换后的最优值为1，且最差值为0，这里先进行0—1标准化
+得到数据矩阵$\bf B$ $ =(b_{jk})_{402 \times 5}$，为了使每个属性变换后的最优值为1，且最差值为0，这里先进行0—1标准化
 \begin{equation}
-    a_{n,m}=\frac{b_{n,m}-b_{min}}{b_{max}-b_{min}}.
+    b'_{jk}=\frac{b_{jk}-b_{min}}{b_{max}-b_{min}}.
 \end{equation}
 
 此外，为了减小矩阵中的订货量和供货量波动过大的影响，对其进行对数化处理。重新赋值，得
 \begin{equation}
-    a_{n,m}=\ln a_{n,m} (m=1,2,5).
+    b''_{jk}=\ln b'_{jk} (k=1,2,5).
 \end{equation}
 
 \item 利用数据矩阵
 
-计算$p_{n,m}(m=1,2,3,4,5)$，即第$n$家供应商关于第$m$个指标值的比重
+计算$p_{jk}(k=1,2,3,4,5)$，即第$j$家供应商关于第$k$个指标值的比重
 \begin{equation}
-    p_{n,m}=\frac{a_{n,m}}{\sum_{n=1}^{402}a_{n,m}}.
+    p_{jk}=\frac{b''_{jk}}{\sum_{j=1}^{402}b''_{jk}}.
 \end{equation}
 
-\item 计算第$m$项指标的熵值
+\item 计算第$k$项指标的熵值
 
 熵本源于热力学与统计物理，后由香农引入信息论。根据熵的定义，有
 \begin{equation}
-    e_m=-\frac{1}{ln402}\sum_{n=1}^{402}p_{n,m}lnp_{n,m}.
+    e_k=-\frac{1}{ln402}\sum_{j=1}^{402}p_{jk}lnp_{jk}.
 \end{equation}
 
-\item 计算第$m$指标的变异系数
+\item 计算第$k$指标的变异系数
 
 \begin{equation}
-    g_m=1-e_m,
+    g_k=1-e_k,
 \end{equation}
-对于第$m$项指标，$e_m$越大，指标值的变异程度就越小。
+对于第$k$项指标，$e_k$越大，指标值的变异程度就越小。
 
-\item 计算第$m$指标的权重
+\item 计算第$k$指标的权重
 
 \begin{equation}
-    w_m=\frac{g_m}{\sum_{m=1}^{5}g_m}.
+    \omega_k=\frac{g_k}{\sum_{k=1}^{5}g_k}.
 \end{equation}
 
 \end{enumerate}
@@ -168,27 +168,27 @@ ${\text{\bf B}}={(b_{n,m})}_{(402 \times 5)}$（用$b_{n,m}$指代各供应商�
 
 \item 用向量规划化的方法求得规范决策矩阵
 \begin{equation}
- {\bf B} =(b_{n,m})_{402 \times 5},
+ {\bf \breve{B}} =(\breve{b}_{jk})_{402 \times 5},
 \end{equation}
 其中
 \begin{equation}
-    b_{n,m}=\frac{a_{n,m}}{\sqrt{\sum_{n=1}^{402}a_{n,m}^2}}.
+    \breve{b}_{jk}=\frac{b''_{jk}}{\sqrt{\sum_{j=1}^{402}b''_{jk}^2}}.
 \end{equation}
-\item 构造加权规范阵$ \bf C $ $=(c_{n,m})_{402 \times 5}$
+\item 构造加权规范阵$ \bf \check{B} $ $=(\check{b}_{jk})_{402 \times 5}$
 
-凭借熵权法给定的各属性的权重，得权重向量$ \bf W $ $ =(w_1,w_2,w_3,w_4,w_5)$，则有
+凭借熵权法给定的各属性的权重，得权重向量$ \bf \Omega $ $ =(\omega_1,\omega_2,\omega_3,\omega_4,\omega_5)$，则有
 \begin{equation}
-    c_{n,m}=w_mb_{n,m}.
+    \check{b}_{jk}=\omega_k\breve{b}_{jk}.
 \end{equation}
-\item 确定正、负理想解$ \bf C^{+}$ $=(c_1^+,c_2^+,c_3^+,c_4^+,c_5^+)$
+\item 确定正、负理想解$ \bf C^+$ $=(c_1^+,c_2^+,c_3^+,c_4^+,c_5^+)$
 、
 ${\bf C^{-}}=(c_1^-,c_2^-,c_3^-,c_4^-,c_5^-)$
 
 正理想解
 \begin{equation}
-c_{m}^{+}=\left\{\begin{array}{ll}
-{ }_{\ n}^{\max } c_{n, m}, & m \text { 为效益型属性 }, \\
-{ }_{\ n}^{\min } c_{n, m}, & m \text { 为成本型属性 };
+c_{k}^{+}=\left\{\begin{array}{ll}
+{ }_{\ j}^{\max } \check{b}_{jk}, & k \text { 为效益型属性 }, \\
+{ }_{\ j}^{\min } \check{b}_{jk}, & k \text { 为成本型属性 };
 \end{array}\right.
 \end{equation}
 负理想解反之。
@@ -197,14 +197,14 @@ c_{m}^{+}=\left\{\begin{array}{ll}
 
 与正理想解的距离
 \begin{equation}
-    s_n^+=\sqrt{\sum_{m=1}^5(c_{n,m}-c_m^+)^2} ,
+    s_j^+=\sqrt{\sum_{k=1}^5(\check{b}_{jk}-c_k^+)^2} ,
 \end{equation}
 与负理想解的距离同理。
-\item 计算各供应商的排序指标值（即综合评价指数）
+\item 计算各供应商对理想解的相对接近程度作排序指标值（即综合评价指数）
 \begin{equation}
-    f_n=\frac{s_n^-}{s_n^-+s_n^+}.
+    f_j=\frac{s_j^-}{s_j^-+s_j^+}.
 \end{equation}
-\item 按$f_n$由大到小排列供应商的优劣次序
+\item 按$f_j$由大到小排列供应商的优劣次序
 
 \end{enumerate}
 
@@ -282,18 +282,19 @@ Table 1 \quad Weights of each indicator } \vskip2mm
 通过预选供应商，本文已筛选出供应能力较突出的供应商。
 为了进一步得到合适数量的供应商，满足企业每周生产需求，并使供货最稳定，本文建立供应商选择0\textendash1规划模型，以决定实际供货商选取：
 % \begin{equation}
-%     u_n=
+%     \lambda_j=
 % \begin{cases}
-% 0& \text{第$n$家供应商未选上}
+% 0& \text{第$j$家供应商未选上}
 % \\
-% 1& \text{第$n$家供应商被选上}
+% 1& \text{第$j$家供应商被选上}
 % \end{cases}
 % \end{equation}
 \begin{equation}
 \begin{split}
-{\bf min}\quad &\varepsilon=\sum_{n=1}^{66} u_n\varepsilon_n \\
-{\bf s.t.}\quad &\sum_{n=1}^{66} u_n\varphi_n > 2.84\times 10^4
+{\bf min}\quad &\Lambda=\sum_{j=1}^{66} \lambda_j\varepsilon_j \\
+{\bf s.t.}\quad &\sum_{j=1}^{66} \lambda_j\bar{y}_j > 2.84\times 10^4
 \end{split}
 \end{equation}
-其中，$u_n$是表示第$n$家供应商是否被选上的0\textendash1变量，$\varphi_n$是第$n$家供应商的供货能力。
+其中，$\lambda_j$是表示第$j$家供应商是否被选上的0\textendash1变量.
+而$\bar{y}_j$是第$j$家供应商的供货能力，计算方法见于后文。
 通过对模型的求解，得到最终选定的44家供应商。
