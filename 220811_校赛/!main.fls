@@ -457,6 +457,7 @@ INPUT d:/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmbx5.tfm
 INPUT d:/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib5.tfm
 INPUT d:/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm
 INPUT d:/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmr5.tfm
+INPUT Image/50_providers.jpg
 INPUT Image/Graph2.eps
 INPUT Image/Graph2.eps
 INPUT Image/评价总览.eps
@@ -483,6 +484,8 @@ INPUT para/Section_6_企业产能上限优化.tex
 INPUT para/Section_6_企业产能上限优化.tex
 INPUT Image/qus_3_订购方案.eps
 INPUT Image/qus_3_订购方案.eps
+INPUT d:/texlive/2020/texmf-dist/tex/latex/listings/lstlang1.sty
+INPUT d:/texlive/2020/texmf-dist/tex/latex/listings/lstlang1.sty
 INPUT !main.aux
 INPUT ./!main.out
 INPUT ./!main.out

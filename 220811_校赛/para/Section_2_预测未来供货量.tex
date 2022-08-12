@@ -22,13 +22,13 @@
 % 自然地，这种情况下供应商的供货量主要受其历史供货情况影响，故神经网络不依赖订货量便能够对其进行预测是可以理解的。
 本文在过去五年的交易数据中，以前四年训练神经网络，取第五年为测试集。
 
-LSTM是由一系列节点（又称LSTM单元）组成的。如图4所示，LSTM单元内部主要有三个阶段。
+LSTM是由一系列节点（又称LSTM单元）组成的。如图5所示，LSTM单元内部主要有三个阶段。
 
 \begin{center} {\centering
 \vbox{
   \centerline{\includegraphics[width=8cm]{Image/node.jpg}}
   \vskip 1mm{\small
-  图4\quad LSTM网络结构图\label{lstm}
+  图5\quad LSTM网络结构图\label{lstm}
   \\}
   }
   }
@@ -93,13 +93,13 @@ y^t=\sigma(\omega'h^t),
 此外，本文为了使用神经网络预测供货量，所以在条件的假设上做了一定让步（假设并不严格恒成立），导致后文还要对此处得到的结果继续进行修正。
 
 
-本文的LSTM是由PyTorch实现的，结构如图5所示：
+本文的LSTM是由PyTorch实现的，结构如图6所示：
 
 \begin{center} {\centering
 \vbox{
   \centerline{\includegraphics[width=16cm]{Image/lstm.eps}}
   \vskip 1mm{\small
-  图5\quad LSTM网络结构图\label{lstm}
+  图6\quad LSTM网络结构图\label{lstm}
   \\}
   }
   }
@@ -174,7 +174,7 @@ y^t=\sigma(\omega'h^t),
 \vbox{
 	\centerline{\includegraphics[width=8cm]{Image/comparison.eps}}
 	\vskip 1mm{\small
-	图6\quad 拟合验证图\label{lstm}
+	图7\quad 拟合验证图\label{lstm}
 	\\}
 	}
 	}
