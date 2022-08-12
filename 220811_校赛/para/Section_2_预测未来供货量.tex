@@ -22,7 +22,17 @@
 % 自然地，这种情况下供应商的供货量主要受其历史供货情况影响，故神经网络不依赖订货量便能够对其进行预测是可以理解的。
 本文在过去五年的交易数据中，以前四年训练神经网络，取第五年为测试集。
 
-LSTM是由一系列节点（又称LSTM单元）组成的。如图？？？所示，LSTM单元内部主要有三个阶段。
+LSTM是由一系列节点（又称LSTM单元）组成的。如图4所示，LSTM单元内部主要有三个阶段。
+
+\begin{center} {\centering
+\vbox{
+  \centerline{\includegraphics[width=8cm]{Image/node.jpg}}
+  \vskip 1mm{\small
+  图4\quad LSTM网络结构图\label{lstm}
+  \\}
+  }
+  }
+\end{center}
 在第$t$个节点中：
 \\
 (1)忘记阶段——对上一个节点的输入进行选择性忘记，即遗忘门
@@ -80,13 +90,13 @@ y^t=\sigma(\omega'h^t),
 在后文中，使用$\psi_{i j}$以表示，即通过预测得到的第$i$周第$j$家供应商的供应量。
 
 
-本文的LSTM是由PyTorch实现的，结构如图？？？所示：
+本文的LSTM是由PyTorch实现的，结构如图5所示：
 
 \begin{center} {\centering
 \vbox{
-  \centerline{\includegraphics[width=8cm]{Image/node.jpg}}
+  \centerline{\includegraphics[width=16cm]{Image/lstm.eps}}
   \vskip 1mm{\small
-  图2\quad LSTM网络结构图\label{lstm}
+  图5\quad LSTM网络结构图\label{lstm}
   \\}
   }
   }
@@ -118,15 +128,6 @@ y^t=\sigma(\omega'h^t),
   \end{algorithmic}
 \end{algorithm}
 
-\begin{center} {\centering
-\vbox{
-	\centerline{\includegraphics[width=16cm]{Image/lstm.eps}}
-	\vskip 1mm{\small
-	图2\quad LSTM网络结构图\label{lstm}
-	\\}
-	}
-	}
-\end{center}
 
 %而第$\omega$个节点输出的，即为预测值$\hat{y}_{\omega,n}$，其能反映第$n$家供货商在第$\omega$周的供货能力。
 
@@ -164,7 +165,7 @@ y^t=\sigma(\omega'h^t),
 \vbox{
 	\centerline{\includegraphics[width=8cm]{Image/comparison.eps}}
 	\vskip 1mm{\small
-	图2\quad 拟合验证图\label{lstm}
+	图6\quad 拟合验证图\label{lstm}
 	\\}
 	}
 	}

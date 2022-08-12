@@ -394,9 +394,6 @@ INPUT !main.bbl
 INPUT !main.bbl
 INPUT para/Abstract.tex
 INPUT para/Abstract.tex
-OUTPUT !main.xdv
-INPUT para/Backgroud.tex
-INPUT para/Backgroud.tex
 INPUT d:/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
 INPUT d:/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmmi8.tfm
 INPUT d:/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm
@@ -428,6 +425,9 @@ INPUT d:/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy7.tfm
 INPUT d:/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT d:/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
 INPUT d:/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
+OUTPUT !main.xdv
+INPUT para/Backgroud.tex
+INPUT para/Backgroud.tex
 INPUT para/Section_1_供应商的选择.tex
 INPUT para/Section_1_供应商的选择.tex
 INPUT d:/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmmi5.tfm
@@ -461,21 +461,7 @@ INPUT Image/Graph2.eps
 INPUT Image/Graph2.eps
 INPUT Image/评价总览.eps
 INPUT Image/评价总览.eps
-INPUT d:/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmmi7.tfm
-INPUT d:/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmsy7.tfm
-INPUT d:/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm
-INPUT d:/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
-INPUT d:/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm
-INPUT d:/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm
-INPUT d:/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
-INPUT d:/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
-INPUT d:/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmbx7.tfm
-INPUT d:/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmbx5.tfm
-INPUT d:/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib7.tfm
-INPUT d:/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib5.tfm
-INPUT d:/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy7.tfm
-INPUT d:/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm
-INPUT d:/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmr7.tfm
+INPUT Image/44_providers.jpg
 INPUT para/Section_2_预测未来供货量.tex
 INPUT para/Section_2_预测未来供货量.tex
 INPUT Image/node.jpg
@@ -491,8 +477,12 @@ INPUT Image/final test.eps
 INPUT Image/final test.eps
 INPUT para/Section_5_原材料的订购和转运方案扩展.tex
 INPUT para/Section_5_原材料的订购和转运方案扩展.tex
+INPUT Image/qus_3_库存.eps
+INPUT Image/qus_3_库存.eps
 INPUT para/Section_6_企业产能上限优化.tex
 INPUT para/Section_6_企业产能上限优化.tex
+INPUT Image/qus_3_订购方案.eps
+INPUT Image/qus_3_订购方案.eps
 INPUT !main.aux
 INPUT ./!main.out
 INPUT ./!main.out
