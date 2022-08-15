@@ -1,0 +1,94 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{杨庆军2012浅谈}{article}{}
+      \name{author}{2}{}{%
+        {{hash=f45058220ac4a77f96d388b73fe5b06c}{%
+           family={杨庆军},
+           familyi={杨\bibinitperiod}}}%
+        {{hash=1643ce2df9b8323df671d3cecb2474a8}{%
+           family={孙满},
+           familyi={孙\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {chinese}%
+      }
+      \strng{namehash}{44278dc207065797876b32b04dcbdcc6}
+      \strng{fullhash}{5d86297c85408a611921e4c8318f8736}
+      \strng{bibnamehash}{5d86297c85408a611921e4c8318f8736}
+      \strng{authorbibnamehash}{5d86297c85408a611921e4c8318f8736}
+      \strng{authornamehash}{44278dc207065797876b32b04dcbdcc6}
+      \strng{authorfullhash}{5d86297c85408a611921e4c8318f8736}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{中国外资}
+      \field{langid}{english}
+      \field{lansortorder}{1}
+      \field{number}{7}
+      \field{title}{浅谈 ERP 环境下的原材料管理}
+      \field{usera}{J}
+      \field{userd}{chinese}
+      \field{userf}{chinese}
+      \field{year}{2012}
+      \field{dateera}{ce}
+      \field{pages}{196\bibrangedash 196}
+      \range{pages}{1}
+      \keyw{杨庆军2012浅谈}
+    \endentry
+    \entry{李红燕2018论企业原材料的管理和研究}{article}{}
+      \name{author}{1}{}{%
+        {{hash=ac2f6d7d5a9454b8c41294c91430eeb5}{%
+           family={李红燕},
+           familyi={李\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {chinese}%
+      }
+      \strng{namehash}{ac2f6d7d5a9454b8c41294c91430eeb5}
+      \strng{fullhash}{ac2f6d7d5a9454b8c41294c91430eeb5}
+      \strng{bibnamehash}{ac2f6d7d5a9454b8c41294c91430eeb5}
+      \strng{authorbibnamehash}{ac2f6d7d5a9454b8c41294c91430eeb5}
+      \strng{authornamehash}{ac2f6d7d5a9454b8c41294c91430eeb5}
+      \strng{authorfullhash}{ac2f6d7d5a9454b8c41294c91430eeb5}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{财会学习}
+      \field{langid}{english}
+      \field{lansortorder}{1}
+      \field{number}{2}
+      \field{title}{论企业原材料的管理和研究}
+      \field{usera}{J}
+      \field{userd}{chinese}
+      \field{userf}{chinese}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \field{pages}{181\bibrangedash 181}
+      \range{pages}{1}
+      \keyw{李红燕2018论企业原材料的管理和研究}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
