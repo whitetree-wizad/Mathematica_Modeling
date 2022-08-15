@@ -1,0 +1,41 @@
+%\documentclass{cumcmthesis}
+\documentclass[withoutpreface,bwprint]{style_help/cumcmthesis} %去掉封面与编号页，电子版提交的时候使用。
+%去掉封面与编号页，电子版提交的时候使用。
+
+
+\usepackage[framemethod=TikZ]{mdframed}
+\usepackage{url}   % 网页链接
+\usepackage{subcaption} % 子标题
+
+\usepackage{newclude}
+\usepackage{graphicx}
+\usepackage{booktabs} % 做三线表的上下两条粗线用
+\usepackage{mhchem}
+
+%enumerate添加缩进
+\usepackage{enumitem}
+\setlist[enumerate]{listparindent=\parindent}
+
+\usepackage[
+style=gb7714-2015,
+backend=biber,
+]{biblatex}
+
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{amsmath}
+\renewcommand{\algorithmicrequire}{\textbf{Input:}}  % Use Input in the format of Algorithm
+\renewcommand{\algorithmicensure}{\textbf{Output:}} % Use Output in the format of Algorithm
+
+\addbibresource{reference.bib} %BibTeX数据文件及位置
+\title{生产企业原材料的订购与运输}
+\tihao{C}
+\baominghao{202127003129}
+\schoolname{西北农林科技大学}
+\membera{王瑞祺}
+\memberb{詹旭弘}
+\memberc{王为民}
+\supervisor{张治江}
+\yearinput{2022}
+\monthinput{08}
+\dayinput{10}
