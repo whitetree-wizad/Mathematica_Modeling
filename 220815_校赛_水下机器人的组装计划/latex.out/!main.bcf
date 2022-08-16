@@ -2665,8 +2665,8 @@
     <bcf:datasource type="file" datatype="bibtex">reference.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1">杨庆军2012浅谈</bcf:citekey>
-    <bcf:citekey order="2">李红燕2018论企业原材料的管理和研究</bcf:citekey>
+    <bcf:citekey order="1">智能管道清理机器人</bcf:citekey>
+    <bcf:citekey order="2">基于升力法的贯流式水轮机叶片设计及可行性分析</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
@@ -2675,4 +2675,13 @@
     </bcf:sort>
   </bcf:sortingtemplate>
   <!-- DATALISTS -->
+  <bcf:datalist section="0"
+                name="none/global//global/global"
+                type="entry"
+                sortingtemplatename="none"
+                sortingnamekeytemplatename="global"
+                labelprefix=""
+                uniquenametemplatename="global"
+                labelalphanametemplatename="global">
+  </bcf:datalist>
 </bcf:controlfile>

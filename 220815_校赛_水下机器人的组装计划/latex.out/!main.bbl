@@ -19,74 +19,78 @@
 
 \refsection{0}
   \datalist[entry]{none/global//global/global}
-    \entry{杨庆军2012浅谈}{article}{}
-      \name{author}{2}{}{%
-        {{hash=f45058220ac4a77f96d388b73fe5b06c}{%
-           family={杨庆军},
-           familyi={杨\bibinitperiod}}}%
-        {{hash=1643ce2df9b8323df671d3cecb2474a8}{%
-           family={孙满},
-           familyi={孙\bibinitperiod}}}%
+    \entry{智能管道清理机器人}{article}{}
+      \name{author}{1}{}{%
+        {{hash=23256293e7c286c11e8d9841ceae5001}{%
+           family={刘进芬;王志娜;赵余婷;刘斌;},
+           familyi={刘\bibinitperiod}}}%
       }
       \list{language}{1}{%
         {chinese}%
       }
-      \strng{namehash}{44278dc207065797876b32b04dcbdcc6}
-      \strng{fullhash}{5d86297c85408a611921e4c8318f8736}
-      \strng{bibnamehash}{5d86297c85408a611921e4c8318f8736}
-      \strng{authorbibnamehash}{5d86297c85408a611921e4c8318f8736}
-      \strng{authornamehash}{44278dc207065797876b32b04dcbdcc6}
-      \strng{authorfullhash}{5d86297c85408a611921e4c8318f8736}
+      \strng{namehash}{23256293e7c286c11e8d9841ceae5001}
+      \strng{fullhash}{23256293e7c286c11e8d9841ceae5001}
+      \strng{bibnamehash}{23256293e7c286c11e8d9841ceae5001}
+      \strng{authorbibnamehash}{23256293e7c286c11e8d9841ceae5001}
+      \strng{authornamehash}{23256293e7c286c11e8d9841ceae5001}
+      \strng{authorfullhash}{23256293e7c286c11e8d9841ceae5001}
       \field{sortinit}{1}
       \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{中国外资}
+      \field{abstract}{近年来,随着经济的不断增长和科技的不断发展,越来越多的管道埋藏在土地中,用于输送液体、气体以及松散固体。由于管道运输是最实用、最经济的运输方式,所以管道运输在生活和生产中的使用越来越广泛。随之也出现了一些问题亟待解决,尤其是如何清理管道中残留的垃圾以及如何解决因长期使用而导致的管道堵塞问题。智能管道清理机器人由此诞生,它运用了工厂智能云制造系统和螺旋技术解决了上述问题,可以最大程度地节约资源、节省人力、提高效率,逐渐在当今管道运输中发挥着重要作用。}
+      \field{journaltitle}{物联网技术}
       \field{langid}{english}
       \field{lansortorder}{1}
-      \field{number}{7}
-      \field{title}{浅谈 ERP 环境下的原材料管理}
+      \field{number}{11}
+      \field{title}{智能管道清理机器人}
       \field{usera}{J}
       \field{userd}{chinese}
       \field{userf}{chinese}
-      \field{year}{2012}
+      \field{volume}{11}
+      \field{year}{2021}
       \field{dateera}{ce}
-      \field{pages}{196\bibrangedash 196}
-      \range{pages}{1}
-      \keyw{杨庆军2012浅谈}
+      \field{pages}{96\bibrangedash 97+100}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.16667/j.issn.2095-1302.2021.11.028
+      \endverb
+      \keyw{智能清理;机器人;共轴反转螺旋式;rpa;管道作业;智能探测}
     \endentry
-    \entry{李红燕2018论企业原材料的管理和研究}{article}{}
+    \entry{基于升力法的贯流式水轮机叶片设计及可行性分析}{article}{}
       \name{author}{1}{}{%
-        {{hash=ac2f6d7d5a9454b8c41294c91430eeb5}{%
-           family={李红燕},
-           familyi={李\bibinitperiod}}}%
+        {{hash=5ed93154368e984abd77fa89edc8fdcd}{%
+           family={朱多彪;李龙;沈云;},
+           familyi={朱\bibinitperiod}}}%
       }
       \list{language}{1}{%
         {chinese}%
       }
-      \strng{namehash}{ac2f6d7d5a9454b8c41294c91430eeb5}
-      \strng{fullhash}{ac2f6d7d5a9454b8c41294c91430eeb5}
-      \strng{bibnamehash}{ac2f6d7d5a9454b8c41294c91430eeb5}
-      \strng{authorbibnamehash}{ac2f6d7d5a9454b8c41294c91430eeb5}
-      \strng{authornamehash}{ac2f6d7d5a9454b8c41294c91430eeb5}
-      \strng{authorfullhash}{ac2f6d7d5a9454b8c41294c91430eeb5}
+      \strng{namehash}{5ed93154368e984abd77fa89edc8fdcd}
+      \strng{fullhash}{5ed93154368e984abd77fa89edc8fdcd}
+      \strng{bibnamehash}{5ed93154368e984abd77fa89edc8fdcd}
+      \strng{authorbibnamehash}{5ed93154368e984abd77fa89edc8fdcd}
+      \strng{authornamehash}{5ed93154368e984abd77fa89edc8fdcd}
+      \strng{authorfullhash}{5ed93154368e984abd77fa89edc8fdcd}
       \field{sortinit}{2}
       \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{财会学习}
+      \field{abstract}{根据升力法设计轴流式水力机械转轮叶片的基本原理、方法和步骤,设计了贯流式水轮机叶片,建立了贯流式水轮机的三维模型,并基于fluent,采用rngκ-ε双方程湍流模型和simplec算法对设计叶片进行了数值模拟,得到了叶片表面压力和速度云图、流场流线和速度矢量图,并估算出水轮机水力效率。结果表明,采用升力法进行贯流式水轮机叶片设计具有可行性。}
+      \field{journaltitle}{水电能源科学}
       \field{langid}{english}
       \field{lansortorder}{1}
-      \field{number}{2}
-      \field{title}{论企业原材料的管理和研究}
+      \field{number}{07}
+      \field{title}{基于升力法的贯流式水轮机叶片设计及可行性分析}
       \field{usera}{J}
       \field{userd}{chinese}
       \field{userf}{chinese}
-      \field{year}{2018}
+      \field{volume}{31}
+      \field{year}{2013}
       \field{dateera}{ce}
-      \field{pages}{181\bibrangedash 181}
-      \range{pages}{1}
-      \keyw{李红燕2018论企业原材料的管理和研究}
+      \field{pages}{158\bibrangedash 161}
+      \range{pages}{4}
+      \keyw{升力法;贯流式水轮机;叶片;设计;可行性}
     \endentry
   \enddatalist
 \endrefsection
