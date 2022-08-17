@@ -1,17 +1,20 @@
 # Fdb version 3
-["biber latex.out/!main"] 1660742490 "latex.out/!main.bcf" "latex.out/!main.bbl" "latex.out/!main" 1660743224
-  "latex.out/!main.bcf" 1660743223 124971 d5e2d010264a307215f69fdce1f23f9a "xelatex"
-  "latex.out\!main.bcf" 1660743223 124971 d5e2d010264a307215f69fdce1f23f9a ""
+["biber !main"] 1660745407 "!main.bcf" "!main.bbl" "!main" 1660752235
+  "!main.bcf" 1660752234 124971 d5e2d010264a307215f69fdce1f23f9a "xelatex"
   "reference.bib" 1660663172 2207 d417b38745d2022f437e4458efc21ce6 ""
   (generated)
-  "latex.out/!main.bbl"
-  "latex.out/!main.blg"
-["xdvipdfmx"] 1660743224 "latex.out/!main.xdv" "latex.out/!main.pdf" "latex.out/!main" 1660743225
-  "latex.out/!main.xdv" 1660743223 1062740 37ca0e4f80f3913ecb42a245d299f8b9 "xelatex"
+  "!main.bbl"
+  "!main.blg"
+["xdvipdfmx"] 1660752234 "!main.xdv" "!main.pdf" "!main" 1660752235
+  "!main.xdv" 1660752234 1092860 9963f2da88e1cc1528737f3b7cb0c160 "xelatex"
   (generated)
-  "latex.out/!main.pdf"
-["xelatex"] 1660743217 "!main.tex" "latex.out/!main.xdv" "!main" 1660743224
-  "!main.tex" 1660742970 177 0b72d245de593bff7e8dbd33e3f6a382 ""
+  "!main.pdf"
+["xelatex"] 1660752228 "!main.tex" "!main.xdv" "!main" 1660752235
+  "!main.aux" 1660752234 27968 231e7d5cd7190902b00c6379eae70cd6 "xelatex"
+  "!main.bbl" 1660745409 4609 0f4a55a22815683760caa61b5977a3a3 "biber !main"
+  "!main.out" 1660752234 1900 319e2e1cfd988fec39078174dd382b45 "xelatex"
+  "!main.run.xml" 1660752234 2457 559a00219ede97dbf4c98148b9d0e59c "xelatex"
+  "!main.tex" 1660750992 178 d6436c02bbc69905a774784bd829ba42 ""
   "c:/Windows/Fonts/msyh.ttc" 1575709707 19647736 ff2e53a6131130a07589812ea5b5b0d0 ""
   "d:/texlive/2020/texmf-dist/fonts/map/fontname/texfonts.map" 1603203995 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "d:/texlive/2020/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1603205468 1528 7e12f4c0fcf5a072cebdcfbfc610f54c ""
@@ -246,20 +249,16 @@
   "d:/texlive/2020/texmf-dist/web2c/texmf.cnf" 1603204238 39451 60d7debd9ef8ece44cbe965493576c2d ""
   "d:/texlive/2020/texmf-var/web2c/xetex/xelatex.fmt" 1603205560 4769656 63e27d701cbafc2e1b89f316ab0dd3d3 ""
   "d:/texlive/2020/texmf.cnf" 1603205480 673 4ae7b2f49cee444c5343a45b5d0f169c ""
-  "latex.out/!main.aux" 1660743223 26103 830dcf26b04eb3e74814e1568dd27c45 "xelatex"
-  "latex.out/!main.bbl" 1660742492 4609 0f4a55a22815683760caa61b5977a3a3 "biber latex.out/!main"
-  "latex.out/!main.out" 1660743223 1532 b6b7dcfbcf7ca4742a46db0e6b22a2ad "xelatex"
-  "latex.out/!main.run.xml" 1660743223 2457 559a00219ede97dbf4c98148b9d0e59c "xelatex"
   "para/Abstract.tex" 1660574488 2727 b5ec351a5f1404648baba510d4eb0aed ""
   "para/Appendices.tex" 1660574488 43959 496832c8bcf753a03d630171923527b6 ""
-  "para/Backgroud.tex" 1660743208 4845 f0062d5cfad242cec527737a8cb87be4 ""
-  "para/Section_1_.tex" 1660741225 166 ec7ce36acac7f856586098efec3c49e7 ""
+  "para/Backgroud.tex" 1660743243 4847 43a89e30e30498e5da18bd1dd94aabee ""
+  "para/Section_1_.tex" 1660752226 6695 3dffb54673e34bcfccd5c82478fbafa8 ""
   "para/pre.tex" 1660574488 1205 2c6a0d9afa7c96d45d4c6e1003823011 ""
   "style_help/cumcmthesis.cls" 1660574488 26333 af336ee18012a399e933088805a52415 ""
   (generated)
-  "latex.out/!main.log"
-  "latex.out/!main.xdv"
-  "latex.out/!main.run.xml"
-  "latex.out/!main.aux"
-  "latex.out/!main.bcf"
-  "latex.out/!main.out"
+  "!main.out"
+  "!main.xdv"
+  "!main.bcf"
+  "!main.run.xml"
+  "!main.log"
+  "!main.aux"
