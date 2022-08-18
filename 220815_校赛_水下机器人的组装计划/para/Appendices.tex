@@ -54,22 +54,780 @@
 \section{源程序}
 
 
-\subsection{ELOL.py} % (fold)
+\subsection{水下机器人的组装计划.jl} % (fold)
 % subsection elol (end)
-\begin{lstlisting}[language=python]
-
-\end{lstlisting}
-
-\subsection{work1.py}
-
-\begin{lstlisting}[language=python]
-
-
-\end{lstlisting}
-
-\subsection{linear.jl}
-
-\begin{lstlisting}
-
+\begin{lstlisting}[language=julia]
+    using Markdown
+    using InteractiveUtils
+    
+    using JSON, JuMP, DataFrames, CSV, Gurobi
+    
+    function read_data(path::AbstractString)
+        return CSV.read(path, DataFrame; transpose=true)
+    end
+    
+    begin
+        生产准备费用和单件库存费用() = read_data("每次生产准备费用和单件库存费用.csv")
+        WPCR需求和关键设备工时限制() = read_data("每天 WPCR 需求和关键设备工时限制.csv")
+        连续30周的WPCR需求数据() = read_data("连续 30 周的 WPCR 需求数据.csv")
+    end
+    
+    WPCR需求和关键设备工时限制()
+    
+    连续30周的WPCR需求数据()
+    
+    struct Component
+        生产准备费用::Float64
+        单件库存费用::Float64
+        begin
+            function Component(生产准备费用::Float64, 单件库存费用::Float64)
+                if 生产准备费用 < 0
+                    throw(error("生产准备费用不能为负数！"))
+                end
+                if 单件库存费用 < 0
+                    throw(error("单件库存费用不能为负数！"))
+                end
+                return new(生产准备费用, 单件库存费用)
+            end
+    
+            function Component(生产准备费用::Number, 单件库存费用::Number)
+                return Component(Float64(生产准备费用), Float64(单件库存费用))
+            end
+        end
+    end
+    
+    struct Element
+        生产准备费用::Float64
+        单件库存费用::Float64
+        工时消耗::Int64
+        组件::Dict{String,Component}
+        需求量::Dict{String,Int64}
+        function Element(生产准备费用::Number, 单件库存费用::Number, 工时消耗::Int64, 组件::Dict{String,Component}, 需求量::Dict{String,Int64})
+            if 生产准备费用 < 0
+                throw(error("生产准备费用不能为负数！"))
+            end
+            if 单件库存费用 < 0
+                throw(error("单件库存费用不能为负数！"))
+            end
+            return new(Float64(生产准备费用), Float64(单件库存费用), 工时消耗, 组件, 需求量)
+        end
+    end
+    
+    struct Product
+        生产准备费用::Float64
+        单件库存费用::Float64
+        组件::Dict{String,Element}
+        需求量::Dict{String,Int64}
+        function Product(生产准备费用::Number, 单件库存费用::Number, 组件::Dict{String,Element}, 需求量::Dict{String,Int64})
+            if 生产准备费用 < 0
+                throw(error("生产准备费用不能为负数！"))
+            end
+            if 单件库存费用 < 0
+                throw(error("单件库存费用不能为负数！"))
+            end
+            return new(Float64(生产准备费用), Float64(单件库存费用), 组件, 需求量)
+        end
+    end
+    
+    struct Robot_data
+        生产总工时限制::Dict{String,Int64}
+        需求::Dict{String,Int64}
+        产品::Product
+    end
+    
+    function product_Element(
+        df::DataFrame,
+        element_name::String,
+        需求量::Dict{String,Int64},
+        工时消耗::Int64)
+    
+        function get_index(df::DataFrame, name)
+            filter(:产品 => x -> x == name, df)[1, :]
+        end
+    
+        component = Dict(let item = get_index(df, key)
+            String(item[:产品]) => Component(item[:生产准备费用],
+                item[:单件库存费用])
+        end
+                         for key in keys(需求量))
+        element = let item = get_index(df, element_name)
+            Element(item[:生产准备费用], item[:单件库存费用], 工时消耗, component, 需求量)
+        end
+    
+        return element
+    end
+    
+    function product_Product(
+        df::DataFrame,
+        product_name::String,
+        需求量::Dict{String,Int64},
+        组件需求量::Dict{String,Dict{String,Int64}},
+        工时消耗::Dict{String,Int64})
+    
+        function get_index(df::DataFrame, name)
+            filter(:产品 => x -> x == name, df)[1, :]
+        end
+        element = Dict(key => product_Element(df, key, 组件需求量[key], 工时消耗[key])
+                       for key in keys(需求量))
+    
+        product = let item = get_index(df, product_name)
+            Product(item[:生产准备费用], item[:单件库存费用], element, 需求量)
+        end
+        return product
+    end
+    
+    WPCR需求和关键设备工时限制()
+    
+    function solve_robot(
+        Optimizer,
+        data,
+        add_robot_variables,
+        add_robot_constraints,
+        add_robot_objective,
+        TimeLimit=1)
+    
+        model = Model(Optimizer)
+        set_optimizer_attribute(model, "TimeLimit", TimeLimit)
+        add_robot_variables(model, data)
+        add_robot_constraints(model, data)
+        add_robot_objective(model, data)
+    
+        optimize!(model)
+        println(termination_status(model))
+        if termination_status(model) != OPTIMAL
+            @warn("模型未能求解！")
+            return model
+        end
+    
+        return model
+    end
+    
+    function add_robot_variables(model, data)
+    
+        time = length(data.:需求)
+    
+        get_element(data) = data.:产品.:组件
+        get_component(element) = element.:组件
+    
+        product = data.:产品
+        element = get_element(data)
+        components = [get_component(v) for (k, v) in element]
+    
+        let element_key = keys(element),
+            component_key = keys.(components) |> x -> [[i for i in v] for v in x] |> x -> vcat(x...)
+    
+            @variable(model, x[["WPCR", element_key..., component_key...], [i for i in 1:time]] >= 0, Int)
+            @variable(model, y[["WPCR", element_key..., component_key...], [i for i in 1:time]] >= 0, Int)
+            @variable(model, ω[["WPCR", element_key..., component_key...], [i for i in 1:time]], Bin)
+            @variable(model, M[[element_key...], [i for i in 1:time]] >= 0, Int)
+        end
+        return model, data
+    end
+    
+    function add_robot_constraints(model, data)
+        time = length(data.:需求)
+    
+        int2week(int) = ["周一", "周二", "周三", "周四", "周五", "周六", "周日"][int]
+        get_element(data) = data.:产品.:组件
+        get_component(element) = element.:组件
+    
+        product = data.:产品
+        element = get_element(data)
+        components = [get_component(v) for (k, v) in element]
+    
+        let element_key = keys(element), r⁻ = "WPCR"
+            for t in 1:time
+                for r in element_key
+                    let item = element[r], r⁻ = r, component_key = keys(item.:组件)
+                        for r in component_key
+                            if t == 1
+                                @constraint(model, model.obj_dict[:y][r, t] == 0 + model.obj_dict[:x][r, t] - item.:需求量[r] * model.obj_dict[:x][r⁻, t])
+                            elseif t == 7
+                                @constraint(model, model.obj_dict[:y][r, t] == model.obj_dict[:y][r, t-1] + model.obj_dict[:x][r, t] - item.:需求量[r] * model.obj_dict[:x][r⁻, t])
+    
+                                @constraint(model, model.obj_dict[:y][r, t] == 0)
+                            else
+                                @constraint(model, model.obj_dict[:y][r, t] == model.obj_dict[:y][r, t-1] + model.obj_dict[:x][r, t] - item.:需求量[r] * model.obj_dict[:x][r⁻, t])
+                            end
+    
+                            @constraint(model, model.obj_dict[:x][r, t] == model.obj_dict[:x][r, t] * model.obj_dict[:ω][r, t])
+                        end
+    
+                    end
+    
+                    if t == 1
+                        @constraint(model, model.obj_dict[:y][r, t] == 0 + model.obj_dict[:x][r, t] - product.:需求量[r] * model.obj_dict[:x][r⁻, t])
+                    elseif t == 7
+                        @constraint(model, model.obj_dict[:y][r, t] == model.obj_dict[:y][r, t-1] + model.obj_dict[:x][r, t] - product.:需求量[r] * model.obj_dict[:x][r⁻, t])
+    
+                        @constraint(model, model.obj_dict[:y][r, t] == 0)
+                    else
+                        @constraint(model, model.obj_dict[:y][r, t] == model.obj_dict[:y][r, t-1] + model.obj_dict[:x][r, t] - product.:需求量[r] * model.obj_dict[:x][r⁻, t])
+                    end
+    
+                    @constraint(model, model.obj_dict[:x][r, t] * element[r].:工时消耗 == model.obj_dict[:M][r, t] * model.obj_dict[:ω][r, t])
+    
+                    @constraint(model, model.obj_dict[:x][r, t] == model.obj_dict[:x][r, t] * model.obj_dict[:ω][r, t])
+                end
+    
+                let r = "WPCR"
+                    if t == 1
+                        @constraint(model, data.:需求[int2week(t)] == 0 + model.obj_dict[:x][r, t] - model.obj_dict[:y][r, t])
+                    elseif t == 7
+                        @constraint(model, data.:需求[int2week(t)] == model.obj_dict[:y][r, t-1] + model.obj_dict[:x][r, t] - model.obj_dict[:y][r, t])
+    
+                        @constraint(model, model.obj_dict[:y][r, t] == 0)
+                    else
+                        @constraint(model, data.:需求[int2week(t)] == model.obj_dict[:y][r, t-1] + model.obj_dict[:x][r, t] - model.obj_dict[:y][r, t])
+                    end
+    
+                    @constraint(model, model.obj_dict[:x][r, t] == model.obj_dict[:x][r, t] * model.obj_dict[:ω][r, t])
+                end
+    
+                @constraint(model, sum(model.obj_dict[:M][r, t] for r in element_key) <= data.:生产总工时限制[int2week(t)])
+            end
+        end
+        return model, data
+    end
+    
+    function add_robot_objective(model, data)
+        time = length(data.:需求)
+    
+        int2week(int) = ["周一", "周二", "周三", "周四", "周五", "周六", "周日"][int]
+        get_element(data) = data.:产品.:组件
+        get_component(element) = element.:组件
+    
+        product = data.:产品
+        element = get_element(data)
+        components = [get_component(v) for (k, v) in element]
+    
+        excp = 0
+        let element_key = keys(element), r⁻ = "WPCR"
+            for t in 1:time
+                for r in element_key
+                    let item = element[r], r⁻ = r, component_key = keys(item.:组件)
+                        for r in component_key
+                            excp += item.:组件[r].生产准备费用 * model.obj_dict[:ω][r, t] + item.:组件[r].单件库存费用 * model.obj_dict[:y][r, t]
+                        end
+                    end
+                    excp += product.:组件[r].生产准备费用 * model.obj_dict[:ω][r, t] + product.:组件[r].单件库存费用 * model.obj_dict[:y][r, t]
+                end
+                let r = "WPCR"
+                    excp += product.生产准备费用 * model.obj_dict[:ω][r, t] + product.单件库存费用 * model.obj_dict[:y][r, t]
+                end
+            end
+        end
+        @objective(model, Min, excp)
+        return model, data
+    end
+    
+    function get_生产准备费用(model, data, time)
+    
+        int2week(int) = ["周一", "周二", "周三", "周四", "周五", "周六", "周日"][int]
+        get_element(data) = data.:产品.:组件
+        get_component(element) = element.:组件
+    
+        product = data.:产品
+        element = get_element(data)
+        components = [get_component(v) for (k, v) in element]
+    
+        excp = 0
+        t = time
+        let element_key = keys(element), r⁻ = "WPCR"
+            for r in element_key
+                let item = element[r], r⁻ = r, component_key = keys(item.:组件)
+                    for r in component_key
+                        excp += item.:组件[r].生产准备费用 * model.obj_dict[:ω][r, t]
+                    end
+                end
+                excp += product.:组件[r].生产准备费用 * model.obj_dict[:ω][r, t]
+            end
+            let r = "WPCR"
+                excp += product.生产准备费用 * model.obj_dict[:ω][r, t]
+            end
+        end
+        return excp
+    end
+    
+    function get_生产库存费用(model, data, time)
+    
+        int2week(int) = ["周一", "周二", "周三", "周四", "周五", "周六", "周日"][int]
+        get_element(data) = data.:产品.:组件
+        get_component(element) = element.:组件
+    
+        product = data.:产品
+        element = get_element(data)
+        components = [get_component(v) for (k, v) in element]
+    
+        excp = 0
+        t = time
+        let element_key = keys(element), r⁻ = "WPCR"
+            for r in element_key
+                let item = element[r], r⁻ = r, component_key = keys(item.:组件)
+                    for r in component_key
+                        excp += item.:组件[r].单件库存费用 * model.obj_dict[:y][r, t]
+                    end
+                end
+                excp += product.:组件[r].单件库存费用 * model.obj_dict[:y][r, t]
+            end
+            let r = "WPCR"
+                excp += product.单件库存费用 * model.obj_dict[:y][r, t]
+            end
+        end
+        return excp
+    end
+    
+    md"""
+    ## 第一题
+    """
+    
+    function answer2df(model, data)
+        answser = value.(model.obj_dict[:x])
+        answser = answser |> Matrix |> transpose |> x -> DataFrame(x, axes(answser)[1])
+        answser[!, "生产准备费用"] = (x -> get_生产准备费用(model, data, x)).([1, 2, 3, 4, 5, 6, 7]) .|> value
+        answser[!, "生产库存费用"] = (x -> get_生产库存费用(model, data, x)).([1, 2, 3, 4, 5, 6, 7]) .|> value
+        return answser
+    end
+    
+    let data = let data = WPCR需求和关键设备工时限制(), (len, _) = size(data)
+            let 生产总工时限制 = Dict((
+                    let item = data[i, :]
+                        String(item[:天]) => item["A、B、C生产总工时限制（工时）"]
+                    end
+                    for i in 1:len
+                )),
+                WPCR需求 = Dict(let item = data[i, :]
+                    String(item[:天]) => item["WPCR需求（个）"]
+                end
+                              for i in 1:len),
+                需求量 = Dict(
+                    "A" => 3,
+                    "B" => 4,
+                    "C" => 5),
+                组件需求量 = Dict(
+                    "A" => Dict(
+                        "A1" => 6,
+                        "A2" => 8,
+                        "A3" => 2),
+                    "B" => Dict(
+                        "B1" => 2,
+                        "B2" => 4),
+                    "C" => Dict(
+                        "C1" => 8,
+                        "C2" => 2,
+                        "C3" => 12)),
+                工时消耗 = Dict(
+                    "A" => 3,
+                    "B" => 5,
+                    "C" => 5),
+                product = product_Product(生产准备费用和单件库存费用(),
+                    "WPCR",
+                    需求量,
+                    组件需求量,
+                    工时消耗)
+    
+                Robot_data(
+                    生产总工时限制,
+                    WPCR需求,
+                    product)
+            end
+        end,
+        model = solve_robot(
+            Gurobi.Optimizer,
+            data,
+            add_robot_variables,
+            add_robot_constraints,
+            add_robot_objective)
+    
+        CSV.write("第一题.csv", answer2df(model, data))
+    end
+    
+    md"""
+    ## 第二题
+    """
+    
+    function add_robot_constraints_2(model, data)
+        time = length(data.:需求)
+    
+        int2week(int) = ["周一", "周二", "周三", "周四", "周五", "周六", "周日"][int]
+        get_element(data) = data.:产品.:组件
+        get_component(element) = element.:组件
+    
+        product = data.:产品
+        element = get_element(data)
+        components = [get_component(v) for (k, v) in element]
+    
+        let element_key = keys(element), r⁻ = "WPCR"
+            for t in 1:time
+                for r in element_key
+                    let item = element[r], r⁻ = r, component_key = keys(item.:组件)
+                        for r in component_key
+                            if t == 1
+                                @constraint(model, model.obj_dict[:y][r, t] == 0 + model.obj_dict[:x][r, t] - item.:需求量[r] * model.obj_dict[:x][r⁻, t])
+    
+                                @constraint(model, item.:需求量[r] * model.obj_dict[:x][r⁻, t] <= 0)
+                            elseif t == 7
+                                @constraint(model, model.obj_dict[:y][r, t] == model.obj_dict[:y][r, t-1] + model.obj_dict[:x][r, t] - item.:需求量[r] * model.obj_dict[:x][r⁻, t])
+    
+                                @constraint(model, model.obj_dict[:y][r, t] == 0)
+    
+                                @constraint(model, item.:需求量[r] * model.obj_dict[:x][r⁻, t] <= model.obj_dict[:y][r, t-1])
+                            else
+                                @constraint(model, model.obj_dict[:y][r, t] == model.obj_dict[:y][r, t-1] + model.obj_dict[:x][r, t] - item.:需求量[r] * model.obj_dict[:x][r⁻, t])
+    
+                                @constraint(model, item.:需求量[r] * model.obj_dict[:x][r⁻, t] <= model.obj_dict[:y][r, t-1])
+                            end
+    
+                            @constraint(model, model.obj_dict[:x][r, t] == model.obj_dict[:x][r, t] * model.obj_dict[:ω][r, t])
+                        end
+    
+                    end
+    
+                    if t == 1
+                        @constraint(model, model.obj_dict[:y][r, t] == 0 + model.obj_dict[:x][r, t] - product.:需求量[r] * model.obj_dict[:x][r⁻, t])
+    
+                        @constraint(model, product.:需求量[r] * model.obj_dict[:x][r⁻, t] <= 0)
+                    elseif t == 7
+                        @constraint(model, model.obj_dict[:y][r, t] == model.obj_dict[:y][r, t-1] + model.obj_dict[:x][r, t] - product.:需求量[r] * model.obj_dict[:x][r⁻, t])
+    
+                        @constraint(model, model.obj_dict[:y][r, t] == 0)
+    
+                        @constraint(model, product.:需求量[r] * model.obj_dict[:x][r⁻, t] <= model.obj_dict[:y][r, t-1])
+                    else
+                        @constraint(model, model.obj_dict[:y][r, t] == model.obj_dict[:y][r, t-1] + model.obj_dict[:x][r, t] - product.:需求量[r] * model.obj_dict[:x][r⁻, t])
+    
+                        @constraint(model, product.:需求量[r] * model.obj_dict[:x][r⁻, t] <= model.obj_dict[:y][r, t-1])
+                    end
+    
+                    @constraint(model, model.obj_dict[:x][r, t] * element[r].:工时消耗 == model.obj_dict[:M][r, t] * model.obj_dict[:ω][r, t])
+    
+                    @constraint(model, model.obj_dict[:x][r, t] == model.obj_dict[:x][r, t] * model.obj_dict[:ω][r, t])
+                end
+    
+                let r = "WPCR"
+                    if t == 1
+                        @constraint(model, data.:需求[int2week(t)] == 75 + model.obj_dict[:x][r, t] - model.obj_dict[:y][r, t])
+                    elseif t == 7
+                        @constraint(model, data.:需求[int2week(t)] == model.obj_dict[:y][r, t-1] + model.obj_dict[:x][r, t] - model.obj_dict[:y][r, t])
+    
+                        @constraint(model, model.obj_dict[:y][r, t] == 0)
+                    else
+                        @constraint(model, data.:需求[int2week(t)] == model.obj_dict[:y][r, t-1] + model.obj_dict[:x][r, t] - model.obj_dict[:y][r, t])
+                    end
+                    @constraint(model, model.obj_dict[:x][r, t] == model.obj_dict[:x][r, t] * model.obj_dict[:ω][r, t])
+                end
+    
+                @constraint(model, sum(model.obj_dict[:M][r, t] for r in element_key) <= data.:生产总工时限制[int2week(t)])
+            end
+        end
+        return model, data
+    end
+    
+    let data = let data = WPCR需求和关键设备工时限制(), (len, _) = size(data)
+            let 生产总工时限制 = Dict((
+                    let item = data[i, :]
+                        String(item[:天]) => item["A、B、C生产总工时限制（工时）"]
+                    end
+                    for i in 1:len
+                )),
+                WPCR需求 = Dict(let item = data[i, :]
+                    String(item[:天]) => item["WPCR需求（个）"]
+                end
+                              for i in 1:len),
+                需求量 = Dict(
+                    "A" => 3,
+                    "B" => 4,
+                    "C" => 5),
+                组件需求量 = Dict(
+                    "A" => Dict(
+                        "A1" => 6,
+                        "A2" => 8,
+                        "A3" => 2),
+                    "B" => Dict(
+                        "B1" => 2,
+                        "B2" => 4),
+                    "C" => Dict(
+                        "C1" => 8,
+                        "C2" => 2,
+                        "C3" => 12)),
+                工时消耗 = Dict(
+                    "A" => 3,
+                    "B" => 5,
+                    "C" => 5),
+                product = product_Product(生产准备费用和单件库存费用(),
+                    "WPCR",
+                    需求量,
+                    组件需求量,
+                    工时消耗)
+    
+                Robot_data(
+                    生产总工时限制,
+                    WPCR需求,
+                    product)
+            end
+        end,
+        model = solve_robot(
+            Gurobi.Optimizer,
+            data,
+            add_robot_variables,
+            add_robot_constraints_2,
+            add_robot_objective)
+    
+        CSV.write("第二题.csv", answer2df(model, data))
+    end
+    
+    md"""
+    ## 第三题
+    """
+    
+    function third_write(model, path)
+        third_answer(model) = model.obj_dict[:μ][:, 1] |> x -> zip(axes(x)[1], Vector(value.(x))) |> collect |> x -> filter(x -> x[2] == 1, x) |> x -> map(x -> x[1], x)
+    
+        title = append!(["第" * string(i) * "次" for i in 1:7], ["总成本\n"]) |> x -> join(x, ", ")
+        values = append!(third_answer(model), [round(objective_value(model))]) |> x -> join(x, ", ")
+        write(path, title * values)
+    end
+    
+    function str2week(key_str)
+        last = lastindex(key_str)
+        first = prevind(key_str, last)
+        return key_str[first:last]
+    end
+    
+    function WPCR_30_to_Dict(data::DataFrame)
+        WPCR_30_Dict = Dict()
+        for (k1, v) in zip(1:100, eachcol(连续30周的WPCR需求数据()))
+            int2week(int) = "第" * string(int - 1) * "周"
+            int2week(int1, int2) = int2week(int1) * (["周一", "周二", "周三", "周四", "周五", "周六", "周日"][int2])
+            if k1 != 1
+                for (k2, v2) in zip(1:7, v)
+                    WPCR_30_Dict[int2week(k1, k2)] = v2
+                end
+            end
+        end
+        return WPCR_30_Dict
+    end
+    
+    function add_robot_variables_3(model, data)
+    
+        time = length(data.:需求)
+    
+        get_element(data) = data.:产品.:组件
+        get_component(element) = element.:组件
+    
+        product = data.:产品
+        element = get_element(data)
+        components = [get_component(v) for (k, v) in element]
+    
+        let element_key = keys(element),
+            component_key = keys.(components) |> x -> [[i for i in v] for v in x] |> x -> vcat(x...)
+    
+            @variable(model, x[["WPCR", element_key..., component_key...], [i for i in 1:time]] >= 0, Int)
+            @variable(model, y[["WPCR", element_key..., component_key...], [i for i in 1:time]] >= 0, Int)
+            @variable(model, ω[["WPCR", element_key..., component_key...], [i for i in 1:time]], Bin)
+            @variable(model, M[[element_key...], [i for i in 1:time]] >= 0, Int)
+            @variable(model, μ[[i for i in -4:time]], Bin)
+            @constraint(model, [i = -4:0], model.obj_dict[:μ][i] == 0)
+        end
+        return model, data
+    end
+    
+    function add_robot_constraints_3(model, data)
+        time = length(data.:需求)
+    
+        week(day) = mod(day - 1, 7) + 1
+        int2week(int) = ["周一", "周二", "周三", "周四", "周五", "周六", "周日"][week(int)]
+        day2week(day) = "第" * string(div(day - 1, 7) + 1) * "周" * int2week(day)
+        get_element(data) = data.:产品.:组件
+        get_component(element) = element.:组件
+    
+        product = data.:产品
+        element = get_element(data)
+    
+        let element_key = keys(element), r⁻ = "WPCR"
+            for t in 1:time
+                for r in element_key
+                    let item = element[r], r⁻ = r, component_key = keys(item.:组件)
+                        for r in component_key
+                            if t == 1
+                                @constraint(model, model.obj_dict[:y][r, t] == 0 + model.obj_dict[:x][r, t] - item.:需求量[r] * model.obj_dict[:x][r⁻, t])
+    
+                                @constraint(model, item.:需求量[r] * model.obj_dict[:x][r⁻, t] <= 0)
+                            elseif t == time
+                                @constraint(model, model.obj_dict[:y][r, t] == model.obj_dict[:y][r, t-1] + model.obj_dict[:x][r, t] - item.:需求量[r] * model.obj_dict[:x][r⁻, t])
+    
+                                @constraint(model, model.obj_dict[:y][r, t] == 0)
+    
+                                @constraint(model, item.:需求量[r] * model.obj_dict[:x][r⁻, t] <= model.obj_dict[:y][r, t-1])
+                            else
+                                @constraint(model, model.obj_dict[:y][r, t] == model.obj_dict[:y][r, t-1] + model.obj_dict[:x][r, t] - item.:需求量[r] * model.obj_dict[:x][r⁻, t])
+    
+                                @constraint(model, item.:需求量[r] * model.obj_dict[:x][r⁻, t] <= model.obj_dict[:y][r, t-1])
+                            end
+    
+                            @constraint(model, model.obj_dict[:x][r, t] == model.obj_dict[:x][r, t] * model.obj_dict[:ω][r, t])
+                        end
+    
+                    end
+    
+                    if t == 1
+                        @constraint(model, model.obj_dict[:y][r, t] == 0 + model.obj_dict[:x][r, t] - product.:需求量[r] * model.obj_dict[:x][r⁻, t])
+    
+                        @constraint(model, product.:需求量[r] * model.obj_dict[:x][r⁻, t] <= 0)
+                    elseif t == time
+                        @constraint(model, model.obj_dict[:y][r, t] == model.obj_dict[:y][r, t-1] + model.obj_dict[:x][r, t] - product.:需求量[r] * model.obj_dict[:x][r⁻, t])
+    
+                        @constraint(model, model.obj_dict[:y][r, t] == 0)
+    
+                        @constraint(model, product.:需求量[r] * model.obj_dict[:x][r⁻, t] <= model.obj_dict[:y][r, t-1])
+                    else
+                        @constraint(model, model.obj_dict[:y][r, t] == model.obj_dict[:y][r, t-1] + model.obj_dict[:x][r, t] - product.:需求量[r] * model.obj_dict[:x][r⁻, t])
+    
+                        @constraint(model, product.:需求量[r] * model.obj_dict[:x][r⁻, t] <= model.obj_dict[:y][r, t-1])
+                    end
+    
+                    @constraint(model, model.obj_dict[:x][r, t] * element[r].:工时消耗 == model.obj_dict[:M][r, t] * model.obj_dict[:ω][r, t])
+    
+                    @constraint(model, model.obj_dict[:x][r, t] == model.obj_dict[:x][r, t] * model.obj_dict[:ω][r, t])
+                end
+    
+                let r = "WPCR"
+                    if t == 1
+                        @constraint(model, data.:需求[day2week(t)] == 75 + model.obj_dict[:x][r, t] - model.obj_dict[:y][r, t])
+                    elseif t == time
+                        @constraint(model, data.:需求[day2week(t)] == model.obj_dict[:y][r, t-1] + model.obj_dict[:x][r, t] - model.obj_dict[:y][r, t])
+    
+                        @constraint(model, model.obj_dict[:y][r, t] == 0)
+                    else
+                        @constraint(model, data.:需求[day2week(t)] == model.obj_dict[:y][r, t-1] + model.obj_dict[:x][r, t] - model.obj_dict[:y][r, t])
+                    end
+    
+                    @constraint(model, model.obj_dict[:x][r, t] == model.obj_dict[:x][r, t] * model.obj_dict[:ω][r, t])
+                end
+    
+                @constraint(model, sum(model.obj_dict[:M][r, t] for r in element_key) <= data.:生产总工时限制[int2week(t)] * (1 - model.obj_dict[:μ][t] + 0.1 * model.obj_dict[:μ][t-1] + 0.08 * model.obj_dict[:μ][t-2] + 0.06 * model.obj_dict[:μ][t-3] + 0.04 * model.obj_dict[:μ][t-4] + 0.02 * model.obj_dict[:μ][t-5]))
+    
+                @constraint(model, sum(model.obj_dict[:M][r, t] for r in element_key) <= data.:生产总工时限制[int2week(t)])
+    
+                if t >= 6
+                    @constraint(model, sum(model.obj_dict[:μ][t] for t in t-5:t) <= 1)
+                end
+    
+            end
+    
+            @constraint(model, sum(model.obj_dict[:μ][t] for t in 1:time) == 7)
+    
+        end
+        return model, data
+    end
+    
+    let data = let data = WPCR需求和关键设备工时限制(), (len, _) = size(data)
+            let 生产总工时限制 = Dict((
+                    let item = data[i, :]
+                        String(item[:天]) => item["A、B、C生产总工时限制（工时）"]
+                    end
+                    for i in 1:len
+                )),
+                WPCR需求 = WPCR_30_to_Dict(连续30周的WPCR需求数据()),
+                需求量 = Dict(
+                    "A" => 3,
+                    "B" => 4,
+                    "C" => 5),
+                组件需求量 = Dict(
+                    "A" => Dict(
+                        "A1" => 6,
+                        "A2" => 8,
+                        "A3" => 2),
+                    "B" => Dict(
+                        "B1" => 2,
+                        "B2" => 4),
+                    "C" => Dict(
+                        "C1" => 8,
+                        "C2" => 2,
+                        "C3" => 12)),
+                工时消耗 = Dict(
+                    "A" => 3,
+                    "B" => 5,
+                    "C" => 5),
+                product = product_Product(生产准备费用和单件库存费用(),
+                    "WPCR",
+                    需求量,
+                    组件需求量,
+                    工时消耗)
+    
+                Robot_data(
+                    生产总工时限制,
+                    WPCR需求,
+                    product)
+            end
+        end
+        model = solve_robot(
+            Gurobi.Optimizer,
+            data,
+            add_robot_variables_3,
+            add_robot_constraints_3,
+            add_robot_objective,
+            600)
+        third_write(model, "第三题.csv")
+    end
+    
+    md"""
+    ## 第四题
+    """
+    
+    第四题预测数据() = read_data("第四题 WPCR 需求和关键设备工时限制.csv")
+    
+    let data = let data = 第四题预测数据(), (len, _) = size(data)
+            let 生产总工时限制 = Dict((
+                    let item = data[i, :]
+                        String(item[:天]) => item["A、B、C生产总工时限制（工时）"]
+                    end
+                    for i in 1:len
+                )),
+                WPCR需求 = Dict(let item = data[i, :]
+                    String(item[:天]) => item["WPCR需求（个）"]
+                end
+                              for i in 1:len),
+                需求量 = Dict(
+                    "A" => 3,
+                    "B" => 4,
+                    "C" => 5),
+                组件需求量 = Dict(
+                    "A" => Dict(
+                        "A1" => 6,
+                        "A2" => 8,
+                        "A3" => 2),
+                    "B" => Dict(
+                        "B1" => 2,
+                        "B2" => 4),
+                    "C" => Dict(
+                        "C1" => 8,
+                        "C2" => 2,
+                        "C3" => 12)),
+                工时消耗 = Dict(
+                    "A" => 3,
+                    "B" => 5,
+                    "C" => 5),
+                product = product_Product(生产准备费用和单件库存费用(),
+                    "WPCR",
+                    需求量,
+                    组件需求量,
+                    工时消耗)
+    
+                Robot_data(
+                    生产总工时限制,
+                    WPCR需求,
+                    product)
+            end
+        end,
+        model = solve_robot(
+            Gurobi.Optimizer,
+            data,
+            add_robot_variables,
+            add_robot_constraints,
+            add_robot_objective)
+    
+        CSV.write("第四题.csv", answer2df(model, data))
+    end
 \end{lstlisting}
 \end{appendices}
