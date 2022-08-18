@@ -93,10 +93,13 @@
       \keyw{升力法;贯流式水轮机;叶片;设计;可行性}
     \endentry
     \entry{Python数学实验与建模}{book}{}
-      \name{author}{1}{}{%
-        {{hash=e77936c5c66be2301d90ced3f22edbdb}{%
-           family={司守奎孙玺菁},
+      \name{author}{2}{}{%
+        {{hash=3e4206ba72486c4016204cede011fef4}{%
+           family={司守奎},
            familyi={司\bibinitperiod}}}%
+        {{hash=366273df2a0ba6b4be9510f9c97cd73c}{%
+           family={孙玺菁},
+           familyi={孙\bibinitperiod}}}%
       }
       \list{language}{1}{%
         {chinese}%
@@ -107,11 +110,11 @@
       \list{publisher}{1}{%
         {科学出版社}%
       }
-      \strng{namehash}{e77936c5c66be2301d90ced3f22edbdb}
+      \strng{namehash}{be88317b605e2a7d17b55fb565339048}
       \strng{fullhash}{e77936c5c66be2301d90ced3f22edbdb}
       \strng{bibnamehash}{e77936c5c66be2301d90ced3f22edbdb}
       \strng{authorbibnamehash}{e77936c5c66be2301d90ced3f22edbdb}
-      \strng{authornamehash}{e77936c5c66be2301d90ced3f22edbdb}
+      \strng{authornamehash}{be88317b605e2a7d17b55fb565339048}
       \strng{authorfullhash}{e77936c5c66be2301d90ced3f22edbdb}
       \field{sortinit}{3}
       \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
