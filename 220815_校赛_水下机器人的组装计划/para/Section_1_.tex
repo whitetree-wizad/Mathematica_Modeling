@@ -66,7 +66,7 @@ $s^{r} \omega_{t}^{r}$表示部件$r$生产的生产准备费用。
 
 	\item 题中所给边界条件\\
 	要求生产周期开始时没有任何组件库存，周期结束后也不留下任何组件库存，因此，令：
-	\begin{equation}
+	\begin{equation}\label{边界条件}
 		y_{0}^{r}=y_{T}^{r}=0,\quad  r=1,2, \cdots, R.
 	\end{equation}
 
@@ -79,9 +79,11 @@ $s^{r} \omega_{t}^{r}$表示部件$r$生产的生产准备费用。
 
 	由于式\ref{key1}不便直接用程序计算，故将式\ref{key1}、\ref{key2}合并为下式
 	\begin{equation}
-		\begin{array}{c}
+		\begin{array}{c}\label{修正式}
 c^{r} x_{t}^{r}=M_{t}^{r} \omega_{t}^{r}, \quad t=1,2, \cdots, T, r=1,2, \cdots, R; \\
+x_{t}^{r}=x_{t}^{r} \omega_{t}^{r},\quad t=1,2, \cdots, T, r=1,2, \cdots, R;\\
 \sum_{r=1}^{R} M_{t}^{r} \leqslant M_{t}; \\
+M_{t}^{r} \leqslant M_{t}^{r} \omega_{t}^{r}, \quad t=1,2, \cdots, T, r=1,2, \cdots, R;\\
 M_{t}^{r} \geqslant 0,\quad  r=1,2, \cdots, R.
 \end{array}
 	\end{equation}
@@ -100,6 +102,7 @@ M_{t}^{r} \geqslant 0,\quad  r=1,2, \cdots, R.
 &M_{t}^{r} \leqslant M_{t}^{r} \omega_{t}^{r}, &t=1,2, \cdots, T, r=1,2, \cdots, R;\\
 & y_{t}^{r}=y_{t-1}^{r}+x_{t}^{r}-\eta_{r}^{r} x_{t}^{r^{\prime}}, &t=1,2, \cdots, T,  r=1,2, \cdots, R; \\
 &\omega_{t}^{r} \in\{0,1\}, &t=1,2, \cdots, T, r=1,2, \cdots, R; \\
+&x_{t}^{r}=x_{t}^{r} \omega_{t}^{r},& t=1,2, \cdots, T, r=1,2, \cdots, R;\\
 &c^{r} x_{t}^{r}=M_{t}^{r} \omega_{t}^{r}, &t=1,2, \cdots, T, r=1,2, \cdots, R; \\
 &M_{t}^{r} \geqslant 0,& r=1,2, \cdots, R ;\\
 &y_{0}^{r}=y_{T}^{r}=0,& r=1,2, \cdots, R ;\\
