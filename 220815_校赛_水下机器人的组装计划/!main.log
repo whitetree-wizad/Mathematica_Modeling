@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.10.20)  18 AUG 2022 16:54
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.10.20)  18 AUG 2022 22:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2039,7 +2039,7 @@ Package fontspec Info: Font family 'SimSun(1)' created for font 'SimSun' with
 
 
 LaTeX Font Warning: Font shape `TU/SimSun(1)/b/n' undefined
-(Font)              using `TU/SimSun(1)/m/n' instead on input line 60.
+(Font)              using `TU/SimSun(1)/m/n' instead on input line 56.
 
 ) (./para/Section_1_.tex
 
@@ -2068,6 +2068,9 @@ LaTeX Warning: Command \textendash invalid in math mode on input line 26.
 LaTeX Warning: Command \textendash invalid in math mode on input line 51.
 
 [4]
+
+LaTeX Warning: Reference `姜启源2011数学模型' on page 5 undefined on input line 80.
+
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\leavevmode@ifvmode' on input line 93.
@@ -2518,10 +2521,13 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 15.
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 15.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 15.
 Package rerunfilecheck Info: File `!main.out' has not changed.
-(rerunfilecheck)             Checksum: C370E6F49336A7C8AA47279BF032F3F9;3077.
+(rerunfilecheck)             Checksum: 7DCAC2DBCABF1F5F292566EC49F2F9D1;3117.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -2531,12 +2537,12 @@ Package logreq Info: Writing requests to '!main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 42578 strings out of 479418
- 858782 string characters out of 5888104
- 1704968 words of memory out of 5000000
- 59336 multiletter control sequences out of 15000+600000
+ 42569 strings out of 479418
+ 857761 string characters out of 5888104
+ 1705184 words of memory out of 5000000
+ 59327 multiletter control sequences out of 15000+600000
  540781 words of font info for 124 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  76i,13n,88p,1150b,4936s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on !main.xdv (43 pages, 1141560 bytes).
+Output written on !main.xdv (43 pages, 1142692 bytes).

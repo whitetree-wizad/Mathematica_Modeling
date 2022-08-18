@@ -44,7 +44,6 @@
   title={运筹学教程},
   author={胡运权},
   year={2003},
-  address= {北京},
   pages={408-422},
   publisher={清华大学出版社有限公司}
 }
@@ -53,12 +52,11 @@
   title={应用随机过程},
   author={张波 and 张景肖},
   year={2004},
-  address   = {北京},
   pages={17-20},
   publisher={清华大学出版社有限公司}
 }
-@Book{Python数学实验与建模,
-  author    = {司守奎 and 孙玺菁},
+@Book{,
+  author    = {司守奎,孙玺菁},
   publisher = {科学出版社},
   title     = {Python数学实验与建模},
   year      = {2020},
