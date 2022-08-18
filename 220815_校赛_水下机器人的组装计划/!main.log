@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.10.20)  18 AUG 2022 22:16
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.10.20)  19 AUG 2022 00:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2108,6 +2108,13 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.00876pt
 (hyperref)                removed on input line 121.
 
+File: Image/问题一展示.eps Graphic file (type eps)
+<Image/问题一展示.eps>
+
+Overfull \hbox (1.46213pt too wide) in paragraph at lines 133--134
+ [][] 
+ []
+
 ) (./para/Section_2_.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -2127,7 +2134,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.00876pt
 (hyperref)                removed on input line 7.
 
-[6]
+[6] [7]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\leavevmode@ifvmode' on input line 44.
@@ -2168,7 +2175,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 LaTeX Warning: Command \textendash invalid in math mode on input line 11.
 
-[7] [8]
+[8]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\leavevmode@ifvmode' on input line 69.
@@ -2206,16 +2213,16 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.00876pt
 (hyperref)                removed on input line 4.
 
-
+[9]
 Overfull \hbox (28.63081pt too wide) in paragraph at lines 9--10
 []\TU/SimSun(0)/m/n/12.05 因 此，|  为 了 选 择 合 理 的 分 析 方 式 进 行 预 测，|  首 先 要 对 历 史 周
  订 单 数 据 $[]$
  []
 
-[9]
+[10]
 Missing character: There is no ， in font Times New Roman/OT:script=latn;languag
 e=dflt;mapping=tex-text;!
- [10]
+
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\leavevmode@ifvmode' on input line 61.
@@ -2237,44 +2244,81 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 ) (./para/Appendices.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\leavevmode@ifvmode' on input line 10.
+(hyperref)                removing `\leavevmode@ifvmode' on input line 9.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 10.
+(hyperref)                removed on input line 9.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\leavevmode@ifvmode' on input line 10.
+(hyperref)                removing `\leavevmode@ifvmode' on input line 9.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 10.
+(hyperref)                removed on input line 9.
 
 [11]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\leavevmode@ifvmode' on input line 27.
+(hyperref)                removing `\leavevmode@ifvmode' on input line 25.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 27.
+(hyperref)                removed on input line 25.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\leavevmode@ifvmode' on input line 27.
+(hyperref)                removing `\leavevmode@ifvmode' on input line 25.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 27.
+(hyperref)                removed on input line 25.
 
-(d:/texlive/2020/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2020/03/24 1.8d listings language file
-)
+
+LaTeX Warning: Command \textendash invalid in math mode on input line 30.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\leavevmode@ifvmode' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 2.00876pt
+(hyperref)                removed on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\leavevmode@ifvmode' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 2.00876pt
+(hyperref)                removed on input line 35.
+
+[12]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\leavevmode@ifvmode' on input line 57.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 2.00876pt
+(hyperref)                removed on input line 57.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\leavevmode@ifvmode' on input line 57.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 2.00876pt
+(hyperref)                removed on input line 57.
+
 
 Package fontspec Info: Could not resolve font "FangSong/BI" (it probably
 (fontspec)             doesn't exist).
@@ -2298,56 +2342,104 @@ Package fontspec Info: Font family 'FangSong(0)' created for font 'FangSong'
 (fontspec)             <->"FangSong/OT:script=hani;language=dflt;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 
+[13] [14] [15]
+Missing character: There is no ω in font [lmmono9-regular]:!
+ [16]
+Missing character: There is no ⁻ in font [lmmono9-regular]:!
+Missing character: There is no ⁻ in font [lmmono9-regular]:!
+Missing character: There is no ⁻ in font [lmmono9-regular]:!
+Missing character: There is no ⁻ in font [lmmono9-regular]:!
+Missing character: There is no ⁻ in font [lmmono9-regular]:!
+Missing character: There is no ω in font [lmmono9-regular]:!
+Missing character: There is no ⁻ in font [lmmono9-regular]:!
+Missing character: There is no ⁻ in font [lmmono9-regular]:!
+Missing character: There is no ⁻ in font [lmmono9-regular]:!
+Missing character: There is no ω in font [lmmono9-regular]:!
+Missing character: There is no ω in font [lmmono9-regular]:!
+ [17]
+Missing character: There is no ω in font [lmmono9-regular]:!
+Missing character: There is no ⁻ in font [lmmono9-regular]:!
+Missing character: There is no ⁻ in font [lmmono9-regular]:!
+Missing character: There is no ω in font [lmmono9-regular]:!
+ [18]
+Missing character: There is no ω in font [lmmono9-regular]:!
+Missing character: There is no ω in font [lmmono9-regular]:!
+Missing character: There is no ⁻ in font [lmmono9-regular]:!
+Missing character: There is no ⁻ in font [lmmono9-regular]:!
+Missing character: There is no ω in font [lmmono9-regular]:!
+Missing character: There is no ω in font [lmmono9-regular]:!
+Missing character: There is no ω in font [lmmono9-regular]:!
+ [19]
+Missing character: There is no ⁻ in font [lmmono9-regular]:!
+Missing character: There is no ⁻ in font [lmmono9-regular]:!
+ [20] [21]
+Missing character: There is no ⁻ in font [lmmono9-regular]:!
+Missing character: There is no ⁻ in font [lmmono9-regular]:!
+Missing character: There is no ⁻ in font [lmmono9-regular]:!
+Missing character: There is no ⁻ in font [lmmono9-regular]:!
+Missing character: There is no ⁻ in font [lmmono9-regular]:!
+Missing character: There is no ⁻ in font [lmmono9-regular]:!
+Missing character: There is no ⁻ in font [lmmono9-regular]:!
+Missing character: There is no ⁻ in font [lmmono9-regular]:!
+Missing character: There is no ω in font [lmmono9-regular]:!
+ [22]
+Missing character: There is no ⁻ in font [lmmono9-regular]:!
+Missing character: There is no ⁻ in font [lmmono9-regular]:!
+Missing character: There is no ⁻ in font [lmmono9-regular]:!
+Missing character: There is no ⁻ in font [lmmono9-regular]:!
+Missing character: There is no ⁻ in font [lmmono9-regular]:!
+Missing character: There is no ⁻ in font [lmmono9-regular]:!
+Missing character: There is no ω in font [lmmono9-regular]:!
+Missing character: There is no ω in font [lmmono9-regular]:!
+Missing character: There is no ω in font [lmmono9-regular]:!
+ [23] [24]
+Missing character: There is no μ in font [lmmono9-regular]:!
+ [25]
+Missing character: There is no ω in font [lmmono9-regular]:!
+Missing character: There is no μ in font [lmmono9-regular]:!
+Missing character: There is no μ in font [lmmono9-regular]:!
+Missing character: There is no ⁻ in font [lmmono9-regular]:!
+Missing character: There is no ⁻ in font [lmmono9-regular]:!
+ [26]
+Missing character: There is no ⁻ in font [lmmono9-regular]:!
+Missing character: There is no ⁻ in font [lmmono9-regular]:!
+Missing character: There is no ⁻ in font [lmmono9-regular]:!
+Missing character: There is no ⁻ in font [lmmono9-regular]:!
+Missing character: There is no ⁻ in font [lmmono9-regular]:!
+Missing character: There is no ⁻ in font [lmmono9-regular]:!
+Missing character: There is no ω in font [lmmono9-regular]:!
+Missing character: There is no ⁻ in font [lmmono9-regular]:!
+Missing character: There is no ⁻ in font [lmmono9-regular]:!
+Missing character: There is no ⁻ in font [lmmono9-regular]:!
+Missing character: There is no ⁻ in font [lmmono9-regular]:!
+Missing character: There is no ⁻ in font [lmmono9-regular]:!
+ [27]
+Missing character: There is no ⁻ in font [lmmono9-regular]:!
+Missing character: There is no ω in font [lmmono9-regular]:!
+Missing character: There is no ω in font [lmmono9-regular]:!
+Missing character: There is no ω in font [lmmono9-regular]:!
+Missing character: There is no μ in font [lmmono9-regular]:!
+Missing character: There is no μ in font [lmmono9-regular]:!
+Missing character: There is no μ in font [lmmono9-regular]:!
+Missing character: There is no μ in font [lmmono9-regular]:!
+Missing character: There is no μ in font [lmmono9-regular]:!
+Missing character: There is no μ in font [lmmono9-regular]:!
+Missing character: There is no μ in font [lmmono9-regular]:!
+Missing character: There is no μ in font [lmmono9-regular]:!
 
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\leavevmode@ifvmode' on input line 33.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 33.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\leavevmode@ifvmode' on input line 33.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 33.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\leavevmode@ifvmode' on input line 40.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 40.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\leavevmode@ifvmode' on input line 40.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 40.
-
-)
+[28] [29] [30])
 
 Package caption Warning: Unused \captionsetup[sub] on input line 9.
 See the caption package documentation for explanation.
 
-[12]
+[31]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 15.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 15.
  (./!main.aux)
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 15.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 15.
 Package rerunfilecheck Info: File `!main.out' has not changed.
-(rerunfilecheck)             Checksum: 3A0669B486C759BAF8E6D1102AE769BF;3118.
+(rerunfilecheck)             Checksum: E0EFA2E30D8538518352AD47182D2089;3187.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -2363,12 +2455,12 @@ Package logreq Info: Writing requests to '!main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 41796 strings out of 479418
- 846640 string characters out of 5888104
- 1672223 words of memory out of 5000000
- 58555 multiletter control sequences out of 15000+600000
- 540773 words of font info for 123 fonts, out of 8000000 for 9000
+ 41689 strings out of 479418
+ 847535 string characters out of 5888104
+ 1713695 words of memory out of 5000000
+ 58448 multiletter control sequences out of 15000+600000
+ 540781 words of font info for 124 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 76i,13n,88p,1150b,4936s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 76i,13n,88p,1150b,4938s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on !main.xdv (12 pages, 133384 bytes).
+Output written on !main.xdv (31 pages, 696736 bytes).
