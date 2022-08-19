@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.10.20)  19 AUG 2022 23:36
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.10.20)  20 AUG 2022 00:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1270,7 +1270,37 @@ Package mhchem Warning: You did not specify a 'version' option for the mhchem
 (mhchem)                different output with the same input in future versions
 .
 
-) (d:/texlive/2020/texmf-dist/tex/latex/biblatex/biblatex.sty
+) (d:/texlive/2020/texmf-dist/tex/latex/diagbox/diagbox.sty
+Package: diagbox 2020/02/09 v2.3 Making table heads with diagonal lines
+
+(d:/texlive/2020/texmf-dist/tex/latex/pict2e/pict2e.sty
+Package: pict2e 2019/08/20 v0.3c Improved picture commands (HjG,RN,JT)
+
+(d:/texlive/2020/texmf-dist/tex/latex/pict2e/pict2e.cfg
+File: pict2e.cfg 2016/02/05 v0.1u pict2e configuration for teTeX/TeXLive
+)
+Package pict2e Info: Driver file: xetex.def on input line 119.
+Package pict2e Info: Driver file for pict2e: p2e-xetex.def on input line 121.
+
+(d:/texlive/2020/texmf-dist/tex/latex/pict2e/p2e-xetex.def
+File: p2e-xetex.def 2016/02/05 v0.1u Driver-dependant file (RN,HjG,JT)
+)
+\pIIe@GRAPH=\toks46
+\@arclen=\dimen343
+\@arcrad=\dimen344
+\@tempdimd=\dimen345
+)
+\diagbox@boxa=\box84
+\diagbox@boxb=\box85
+\diagbox@boxm=\box86
+\diagbox@wd=\dimen346
+\diagbox@ht=\dimen347
+\diagbox@insepl=\dimen348
+\diagbox@insepr=\dimen349
+\diagbox@outsepl=\dimen350
+\diagbox@outsepr=\dimen351
+)
+(d:/texlive/2020/texmf-dist/tex/latex/biblatex/biblatex.sty
 Package: biblatex 2019/12/01 v3.14 programmable bibliographies (PK/MW)
 
 (d:/texlive/2020/texmf-dist/tex/latex/logreq/logreq.sty
@@ -1671,7 +1701,7 @@ File: biblatex.cfg
 Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
 Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
 nment
-\@float@every@algorithm=\toks46
+\@float@every@algorithm=\toks47
 \c@algorithm=\count515
 )
 (d:/texlive/2020/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
@@ -1853,7 +1883,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\AtBeginShipoutBox=\box84
+\AtBeginShipoutBox=\box87
 Package hyperref Info: Link coloring ON on input line 3.
 (d:/texlive/2020/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -2462,7 +2492,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 15.
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 15.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 15.
 Package rerunfilecheck Info: File `!main.out' has not changed.
-(rerunfilecheck)             Checksum: E0EFA2E30D8538518352AD47182D2089;3187.
+(rerunfilecheck)             Checksum: DBC5EC27BF7616C6A10D202B64BDAD4F;3283.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -2475,12 +2505,12 @@ Package logreq Info: Writing requests to '!main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 41724 strings out of 479418
- 847702 string characters out of 5888104
- 1715099 words of memory out of 5000000
- 58476 multiletter control sequences out of 15000+600000
+ 41971 strings out of 479418
+ 851391 string characters out of 5888104
+ 1721711 words of memory out of 5000000
+ 58710 multiletter control sequences out of 15000+600000
  540781 words of font info for 124 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 76i,13n,88p,1150b,4938s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 76i,17n,88p,1150b,4938s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on !main.xdv (37 pages, 744532 bytes).
+Output written on !main.xdv (37 pages, 746868 bytes).

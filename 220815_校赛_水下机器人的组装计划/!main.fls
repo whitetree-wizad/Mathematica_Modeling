@@ -328,6 +328,14 @@ INPUT d:/texlive/2020/texmf-dist/tex/latex/mhchem/mhchem.sty
 INPUT d:/texlive/2020/texmf-dist/tex/latex/mhchem/mhchem.sty
 INPUT d:/texlive/2020/texmf-dist/tex/latex/chemgreek/chemgreek.sty
 INPUT d:/texlive/2020/texmf-dist/tex/latex/chemgreek/chemgreek.sty
+INPUT d:/texlive/2020/texmf-dist/tex/latex/diagbox/diagbox.sty
+INPUT d:/texlive/2020/texmf-dist/tex/latex/diagbox/diagbox.sty
+INPUT d:/texlive/2020/texmf-dist/tex/latex/pict2e/pict2e.sty
+INPUT d:/texlive/2020/texmf-dist/tex/latex/pict2e/pict2e.sty
+INPUT d:/texlive/2020/texmf-dist/tex/latex/pict2e/pict2e.cfg
+INPUT d:/texlive/2020/texmf-dist/tex/latex/pict2e/pict2e.cfg
+INPUT d:/texlive/2020/texmf-dist/tex/latex/pict2e/p2e-xetex.def
+INPUT d:/texlive/2020/texmf-dist/tex/latex/pict2e/p2e-xetex.def
 INPUT d:/texlive/2020/texmf-dist/tex/latex/biblatex/biblatex.sty
 INPUT d:/texlive/2020/texmf-dist/tex/latex/biblatex/biblatex.sty
 INPUT d:/texlive/2020/texmf-dist/tex/latex/logreq/logreq.sty
