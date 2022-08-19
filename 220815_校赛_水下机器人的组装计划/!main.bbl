@@ -1,0 +1,255 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{智能管道清理机器人}{article}{}
+      \name{author}{1}{}{%
+        {{hash=23256293e7c286c11e8d9841ceae5001}{%
+           family={刘进芬;王志娜;赵余婷;刘斌;},
+           familyi={刘\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {chinese}%
+      }
+      \strng{namehash}{23256293e7c286c11e8d9841ceae5001}
+      \strng{fullhash}{23256293e7c286c11e8d9841ceae5001}
+      \strng{bibnamehash}{23256293e7c286c11e8d9841ceae5001}
+      \strng{authorbibnamehash}{23256293e7c286c11e8d9841ceae5001}
+      \strng{authornamehash}{23256293e7c286c11e8d9841ceae5001}
+      \strng{authorfullhash}{23256293e7c286c11e8d9841ceae5001}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{近年来,随着经济的不断增长和科技的不断发展,越来越多的管道埋藏在土地中,用于输送液体、气体以及松散固体。由于管道运输是最实用、最经济的运输方式,所以管道运输在生活和生产中的使用越来越广泛。随之也出现了一些问题亟待解决,尤其是如何清理管道中残留的垃圾以及如何解决因长期使用而导致的管道堵塞问题。智能管道清理机器人由此诞生,它运用了工厂智能云制造系统和螺旋技术解决了上述问题,可以最大程度地节约资源、节省人力、提高效率,逐渐在当今管道运输中发挥着重要作用。}
+      \field{journaltitle}{物联网技术}
+      \field{langid}{english}
+      \field{lansortorder}{1}
+      \field{number}{11}
+      \field{title}{智能管道清理机器人}
+      \field{usera}{J}
+      \field{userd}{chinese}
+      \field{userf}{chinese}
+      \field{volume}{11}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \field{pages}{96\bibrangedash 97+100}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.16667/j.issn.2095-1302.2021.11.028
+      \endverb
+      \keyw{智能清理;机器人;共轴反转螺旋式;rpa;管道作业;智能探测}
+    \endentry
+    \entry{基于升力法的贯流式水轮机叶片设计及可行性分析}{article}{}
+      \name{author}{1}{}{%
+        {{hash=5ed93154368e984abd77fa89edc8fdcd}{%
+           family={朱多彪;李龙;沈云;},
+           familyi={朱\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {chinese}%
+      }
+      \strng{namehash}{5ed93154368e984abd77fa89edc8fdcd}
+      \strng{fullhash}{5ed93154368e984abd77fa89edc8fdcd}
+      \strng{bibnamehash}{5ed93154368e984abd77fa89edc8fdcd}
+      \strng{authorbibnamehash}{5ed93154368e984abd77fa89edc8fdcd}
+      \strng{authornamehash}{5ed93154368e984abd77fa89edc8fdcd}
+      \strng{authorfullhash}{5ed93154368e984abd77fa89edc8fdcd}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{根据升力法设计轴流式水力机械转轮叶片的基本原理、方法和步骤,设计了贯流式水轮机叶片,建立了贯流式水轮机的三维模型,并基于fluent,采用rngκ-ε双方程湍流模型和simplec算法对设计叶片进行了数值模拟,得到了叶片表面压力和速度云图、流场流线和速度矢量图,并估算出水轮机水力效率。结果表明,采用升力法进行贯流式水轮机叶片设计具有可行性。}
+      \field{journaltitle}{水电能源科学}
+      \field{langid}{english}
+      \field{lansortorder}{1}
+      \field{number}{07}
+      \field{title}{基于升力法的贯流式水轮机叶片设计及可行性分析}
+      \field{usera}{J}
+      \field{userd}{chinese}
+      \field{userf}{chinese}
+      \field{volume}{31}
+      \field{year}{2013}
+      \field{dateera}{ce}
+      \field{pages}{158\bibrangedash 161}
+      \range{pages}{4}
+      \keyw{升力法;贯流式水轮机;叶片;设计;可行性}
+    \endentry
+    \entry{姜启源2011数学模型}{book}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{3}{}{%
+        {{hash=69c6e783fec7f7484bbdefda8e7c0f17}{%
+           family={姜启源},
+           familyi={姜\bibinitperiod}}}%
+        {{hash=6093b607419b5255c3d866adda052683}{%
+           family={谢金星},
+           familyi={谢\bibinitperiod}}}%
+        {{hash=0ebf04a3346a0d14bdfba124bc4456a0}{%
+           family={叶俊},
+           familyi={叶\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {chinese}%
+      }
+      \list{publisher}{1}{%
+        {Gao deng jiao yu chu ban she}%
+      }
+      \strng{namehash}{2037210bffe62fc9e2978f5d75e66716}
+      \strng{fullhash}{0ec7ad2da80876742d546f1bc4293b51}
+      \strng{bibnamehash}{0ec7ad2da80876742d546f1bc4293b51}
+      \strng{authorbibnamehash}{0ec7ad2da80876742d546f1bc4293b51}
+      \strng{authornamehash}{2037210bffe62fc9e2978f5d75e66716}
+      \strng{authorfullhash}{0ec7ad2da80876742d546f1bc4293b51}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{lansortorder}{1}
+      \field{title}{数学模型}
+      \field{usera}{M}
+      \field{userd}{chinese}
+      \field{userf}{chinese}
+      \field{year}{2011}
+      \field{dateera}{ce}
+      \keyw{姜启源2011数学模型}
+    \endentry
+    \entry{Python数学实验与建模}{book}{}
+      \name{author}{2}{}{%
+        {{hash=3e4206ba72486c4016204cede011fef4}{%
+           family={司守奎},
+           familyi={司\bibinitperiod}}}%
+        {{hash=366273df2a0ba6b4be9510f9c97cd73c}{%
+           family={孙玺菁},
+           familyi={孙\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {chinese}%
+      }
+      \list{location}{1}{%
+        {北京}%
+      }
+      \list{publisher}{1}{%
+        {科学出版社}%
+      }
+      \strng{namehash}{be88317b605e2a7d17b55fb565339048}
+      \strng{fullhash}{e77936c5c66be2301d90ced3f22edbdb}
+      \strng{bibnamehash}{e77936c5c66be2301d90ced3f22edbdb}
+      \strng{authorbibnamehash}{e77936c5c66be2301d90ced3f22edbdb}
+      \strng{authornamehash}{be88317b605e2a7d17b55fb565339048}
+      \strng{authorfullhash}{e77936c5c66be2301d90ced3f22edbdb}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9787030645272}
+      \field{langid}{english}
+      \field{lansortorder}{1}
+      \field{number}{502-514}
+      \field{title}{Python数学实验与建模}
+      \field{usera}{M}
+      \field{userd}{chinese}
+      \field{userf}{chinese}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \keyw{Python数学实验与建模}
+    \endentry
+    \entry{张波2004应用随机过程}{book}{}
+      \name{author}{2}{}{%
+        {{hash=6d89669607ed782b989ae5e884f044ba}{%
+           family={张波},
+           familyi={张\bibinitperiod}}}%
+        {{hash=105994f3c5828fbf8e35bf5d92c645ed}{%
+           family={张景肖},
+           familyi={张\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {chinese}%
+      }
+      \list{location}{1}{%
+        {北京}%
+      }
+      \list{publisher}{1}{%
+        {清华大学出版社有限公司}%
+      }
+      \strng{namehash}{1841ed5d520ed9378e58904b10c0acf9}
+      \strng{fullhash}{4e0c9cf310e5671bae5a32e7dc42f057}
+      \strng{bibnamehash}{4e0c9cf310e5671bae5a32e7dc42f057}
+      \strng{authorbibnamehash}{4e0c9cf310e5671bae5a32e7dc42f057}
+      \strng{authornamehash}{1841ed5d520ed9378e58904b10c0acf9}
+      \strng{authorfullhash}{4e0c9cf310e5671bae5a32e7dc42f057}
+      \field{sortinit}{5}
+      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{lansortorder}{1}
+      \field{title}{应用随机过程}
+      \field{usera}{M}
+      \field{userd}{chinese}
+      \field{userf}{chinese}
+      \field{year}{2004}
+      \field{dateera}{ce}
+      \field{pages}{17\bibrangedash 20}
+      \range{pages}{4}
+      \keyw{张波2004应用随机过程}
+    \endentry
+    \entry{胡运权2003运筹学教程}{book}{}
+      \name{author}{1}{}{%
+        {{hash=6c366b432426ae3d9c51e3971618b7c4}{%
+           family={胡运权},
+           familyi={胡\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {chinese}%
+      }
+      \list{location}{1}{%
+        {北京}%
+      }
+      \list{publisher}{1}{%
+        {清华大学出版社有限公司}%
+      }
+      \strng{namehash}{6c366b432426ae3d9c51e3971618b7c4}
+      \strng{fullhash}{6c366b432426ae3d9c51e3971618b7c4}
+      \strng{bibnamehash}{6c366b432426ae3d9c51e3971618b7c4}
+      \strng{authorbibnamehash}{6c366b432426ae3d9c51e3971618b7c4}
+      \strng{authornamehash}{6c366b432426ae3d9c51e3971618b7c4}
+      \strng{authorfullhash}{6c366b432426ae3d9c51e3971618b7c4}
+      \field{sortinit}{6}
+      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{lansortorder}{1}
+      \field{title}{运筹学教程}
+      \field{usera}{M}
+      \field{userd}{chinese}
+      \field{userf}{chinese}
+      \field{year}{2003}
+      \field{dateera}{ce}
+      \field{pages}{408\bibrangedash 422}
+      \range{pages}{15}
+      \keyw{胡运权2003运筹学教程}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
