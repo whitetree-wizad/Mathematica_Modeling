@@ -432,12 +432,16 @@ INPUT para/Section_1_.tex
 INPUT para/Section_1_.tex
 INPUT Image/问题一展示.eps
 INPUT Image/问题一展示.eps
+INPUT Image/问题一库存.eps
+INPUT Image/问题一库存.eps
 INPUT para/Section_2_.tex
 INPUT para/Section_2_.tex
 INPUT Image/问题二展示.eps
 INPUT Image/问题二展示.eps
 INPUT Image/问题二展示2.eps
 INPUT Image/问题二展示2.eps
+INPUT Image/问题二库存.eps
+INPUT Image/问题二库存.eps
 INPUT para/Section_3_.tex
 INPUT para/Section_3_.tex
 INPUT Image/问题三展示.eps
