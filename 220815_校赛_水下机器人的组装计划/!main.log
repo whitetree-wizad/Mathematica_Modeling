@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.10.20)  19 AUG 2022 12:44
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.10.20)  19 AUG 2022 14:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2252,6 +2252,8 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.00876pt
 (hyperref)                removed on input line 61.
 
+File: Image/问题四展示.eps Graphic file (type eps)
+<Image/问题四展示.eps>
 ) (./para/Appendices.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -2271,6 +2273,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.00876pt
 (hyperref)                removed on input line 9.
 
+[13]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\leavevmode@ifvmode' on input line 25.
@@ -2310,7 +2313,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.00876pt
 (hyperref)                removed on input line 35.
 
-[13] [14]
+[14]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\leavevmode@ifvmode' on input line 57.
@@ -2465,12 +2468,12 @@ Package logreq Info: Writing requests to '!main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 41707 strings out of 479418
- 847787 string characters out of 5888104
- 1714131 words of memory out of 5000000
- 58463 multiletter control sequences out of 15000+600000
+ 41713 strings out of 479418
+ 847869 string characters out of 5888104
+ 1714276 words of memory out of 5000000
+ 58468 multiletter control sequences out of 15000+600000
  540781 words of font info for 124 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  76i,13n,88p,1150b,4938s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on !main.xdv (33 pages, 698580 bytes).
+Output written on !main.xdv (33 pages, 698928 bytes).
