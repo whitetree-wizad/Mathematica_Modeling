@@ -1,6 +1,7 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.10.20)  19 AUG 2022 14:50
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.10.20)  19 AUG 2022 14:52
 entering extended mode
  restricted \write18 enabled.
+ file:line:error style messages enabled.
  %&-line parsing enabled.
 **!main.tex
 (./!main.tex
@@ -1701,7 +1702,7 @@ Package: xeCJK-listings 2020/02/18 v3.8.2 xeCJK patch file for listings
 \l__xeCJK_listings_max_char_int=\count525
 \l__xeCJK_listings_flag_int=\count526
 )
-(./!main.aux
+(latex.out/!main.aux
 
 LaTeX Warning: Label `sub:生产方案展示' multiply defined.
 
@@ -1870,11 +1871,12 @@ LaTeX Info: Redefining \ref on input line 3.
 LaTeX Info: Redefining \pageref on input line 3.
 LaTeX Info: Redefining \nameref on input line 3.
 
-(./!main.out) (./!main.out)
+(latex.out/!main.out) (latex.out/!main.out)
 \@outlinefile=\write6
 \openout6 = `!main.out'.
 
- ABD: EveryShipout initializing macros
+
+ABD: EveryShipout initializing macros
 
 Package chemgreek Info: Activating mapping `fontspec' on line 3.
 
@@ -1938,6 +1940,13 @@ Package fontspec Info: Font family 'SimHei(0)' created for font 'SimHei' with
 [1
 
 ]) (./para/Backgroud.tex
+
+LaTeX Warning: Citation '智能管道清理机器人' on page 2 undefined on input line 2.
+
+
+LaTeX Warning: Citation '基于升力法的贯流式水轮机叶片设计及可行性分析' on page 2 undefined on input l
+ine 4.
+
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\leavevmode@ifvmode' on input line 25.
@@ -2231,9 +2240,18 @@ Overfull \hbox (28.63081pt too wide) in paragraph at lines 9--10
  []
 
 [10] [11]
+
+LaTeX Warning: Citation 'Python数学实验与建模' on page 12 undefined on input line 24.
+
+
+LaTeX Warning: Citation '张波2004应用随机过程' on page 12 undefined on input line 40.
+
 Missing character: There is no ， in font Times New Roman/OT:script=latn;languag
 e=dflt;mapping=tex-text;!
- [12]
+
+LaTeX Warning: Citation '胡运权2003运筹学教程' on page 12 undefined on input line 48.
+
+[12]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\leavevmode@ifvmode' on input line 61.
@@ -2312,6 +2330,9 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.00876pt
 (hyperref)                removed on input line 35.
+
+
+LaTeX Warning: Empty bibliography on input line 49.
 
 [14]
 
@@ -2448,7 +2469,7 @@ See the caption package documentation for explanation.
 [33]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 15.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 15.
- (./!main.aux)
+ (latex.out/!main.aux)
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 15.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 15.
 Package rerunfilecheck Info: File `!main.out' has not changed.
@@ -2463,17 +2484,22 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                !main
+(biblatex)                and rerun LaTeX afterwards.
+
 Package logreq Info: Writing requests to '!main.run.xml'.
 \openout1 = `!main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 41713 strings out of 479418
- 847869 string characters out of 5888104
- 1714276 words of memory out of 5000000
- 58468 multiletter control sequences out of 15000+600000
- 540781 words of font info for 124 fonts, out of 8000000 for 9000
+ 41682 strings out of 479418
+ 847002 string characters out of 5888104
+ 1714135 words of memory out of 5000000
+ 58435 multiletter control sequences out of 15000+600000
+ 540789 words of font info for 125 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 76i,13n,88p,1150b,4938s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 76i,13n,88p,1150b,3346s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on !main.xdv (33 pages, 698928 bytes).
+Output written on latex.out/!main.xdv (33 pages, 693204 bytes).
