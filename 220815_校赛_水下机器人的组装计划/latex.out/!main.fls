@@ -389,9 +389,9 @@ OUTPUT latex.out/!main.out
 INPUT d:/texlive/2020/texmf-dist/tex/latex/biblatex/lbx/english.lbx
 INPUT d:/texlive/2020/texmf-dist/tex/latex/biblatex/lbx/english.lbx
 OUTPUT latex.out/!main.bcf
-INPUT !main.bbl
-INPUT !main.bbl
-INPUT !main.bbl
+INPUT latex.out/!main.bbl
+INPUT latex.out/!main.bbl
+INPUT latex.out/!main.bbl
 INPUT para/Abstract.tex
 INPUT para/Abstract.tex
 INPUT d:/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
