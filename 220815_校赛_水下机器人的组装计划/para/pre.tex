@@ -27,6 +27,10 @@ backend=biber,
 \renewcommand{\algorithmicrequire}{\textbf{Input:}}  % Use Input in the format of Algorithm
 \renewcommand{\algorithmicensure}{\textbf{Output:}} % Use Output in the format of Algorithm
 
+\catcode`\。=\active
+\newcommand{。}{\ifmmode\text{．}\else ．\fi}
+
+
 \addbibresource{reference.bib} %BibTeX数据文件及位置
 \title{水下机器人的组装计划}
 \tihao{B}

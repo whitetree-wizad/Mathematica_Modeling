@@ -450,6 +450,8 @@ INPUT para/Section_4_.tex
 INPUT para/Section_4_.tex
 INPUT Image/问题四展示.eps
 INPUT Image/问题四展示.eps
+INPUT Image/问题四库存.eps
+INPUT Image/问题四库存.eps
 INPUT para/Appendices.tex
 INPUT para/Appendices.tex
 INPUT latex.out/!main.aux
