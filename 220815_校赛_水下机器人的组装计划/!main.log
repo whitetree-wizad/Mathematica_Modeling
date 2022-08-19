@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.10.20)  19 AUG 2022 23:01
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.10.20)  19 AUG 2022 23:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1897,18 +1897,21 @@ Package biblatex Info: Reference section=0 on input line 3.
 Package biblatex Info: Reference segment=0 on input line 3.
 
 (./para/Abstract.tex
-LaTeX Font Info:    Calculating math sizes for size <12.05> on input line 22.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 22.
+LaTeX Font Info:    Calculating math sizes for size <12.05> on input line 12.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 12.
 
  (d:/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 22.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 12.
 
 
 (d:/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
+
+LaTeX Warning: Command \textendash invalid in math mode on input line 12.
+
 
 LaTeX Warning: Command \textendash invalid in math mode on input line 22.
 
@@ -2210,7 +2213,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 File: Image/问题三展示.eps Graphic file (type eps)
 <Image/问题三展示.eps>
-) (./para/Section_4_.tex
+) (./para/Section_4_.tex [13]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\leavevmode@ifvmode' on input line 4.
@@ -2229,7 +2232,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.00876pt
 (hyperref)                removed on input line 4.
 
-[13]
+
 Overfull \hbox (28.63081pt too wide) in paragraph at lines 9--10
 []\TU/SimSun(0)/m/n/12.05 因 此，|  为 了 选 择 合 理 的 分 析 方 式 进 行 预 测，|  首 先 要 对 历 史 周
  订 单 数 据 $[]$
@@ -2238,6 +2241,15 @@ Overfull \hbox (28.63081pt too wide) in paragraph at lines 9--10
 [14]
 Missing character: There is no ， in font Times New Roman/OT:script=latn;languag
 e=dflt;mapping=tex-text;!
+ [15]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\leavevmode@ifvmode' on input line 61.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 2.00876pt
+(hyperref)                removed on input line 61.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -2248,16 +2260,6 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.00876pt
 (hyperref)                removed on input line 61.
 
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\leavevmode@ifvmode' on input line 61.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 61.
-
-[15]
 File: Image/问题四展示.eps Graphic file (type eps)
 <Image/问题四展示.eps>
 File: Image/问题四库存.eps Graphic file (type eps)
@@ -2281,25 +2283,25 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.00876pt
 (hyperref)                removed on input line 9.
 
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\leavevmode@ifvmode' on input line 25.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 25.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\leavevmode@ifvmode' on input line 25.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 25.
-
 [16]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\leavevmode@ifvmode' on input line 25.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 2.00876pt
+(hyperref)                removed on input line 25.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\leavevmode@ifvmode' on input line 25.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 2.00876pt
+(hyperref)                removed on input line 25.
+
 
 LaTeX Warning: Command \textendash invalid in math mode on input line 30.
 
@@ -2481,4 +2483,4 @@ Here is how much of TeX's memory you used:
  1348 hyphenation exceptions out of 8191
  76i,13n,88p,1150b,4938s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on !main.xdv (37 pages, 743520 bytes).
+Output written on !main.xdv (37 pages, 744532 bytes).
