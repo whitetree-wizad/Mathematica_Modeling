@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.10.20)  16 SEP 2022 22:51
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.10.20)  17 SEP 2022 01:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1982,43 +1982,43 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.00876pt
 (hyperref)                removed on input line 9.
 
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\leavevmode@ifvmode' on input line 17.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 17.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\leavevmode@ifvmode' on input line 17.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 17.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\leavevmode@ifvmode' on input line 17.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 17.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\leavevmode@ifvmode' on input line 17.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 17.
-
 [2]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\leavevmode@ifvmode' on input line 17.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 2.00876pt
+(hyperref)                removed on input line 17.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\leavevmode@ifvmode' on input line 17.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 2.00876pt
+(hyperref)                removed on input line 17.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\leavevmode@ifvmode' on input line 17.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 2.00876pt
+(hyperref)                removed on input line 17.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\leavevmode@ifvmode' on input line 17.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 2.00876pt
+(hyperref)                removed on input line 17.
+
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\leavevmode@ifvmode' on input line 66.
@@ -2487,153 +2487,28 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.00876pt
 (hyperref)                removed on input line 150.
 
-[7]) (./para/Section_3_.tex
+[7]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\leavevmode@ifvmode' on input line 11.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 11.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\leavevmode@ifvmode' on input line 11.
+(hyperref)                removing `\leavevmode@ifvmode' on input line 186.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 11.
+(hyperref)                removed on input line 186.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\leavevmode@ifvmode' on input line 19.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 19.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\leavevmode@ifvmode' on input line 19.
+(hyperref)                removing `\leavevmode@ifvmode' on input line 186.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 19.
+(hyperref)                removed on input line 186.
 
-Missing character: There is no 、 in font Times New Roman/OT:script=latn;languag
-e=dflt;mapping=tex-text;!
-Missing character: There is no 未 in font Times New Roman/OT:script=latn;languag
-e=dflt;mapping=tex-text;!
-Missing character: There is no 知 in font Times New Roman/OT:script=latn;languag
-e=dflt;mapping=tex-text;!
-Missing character: There is no ， in font Times New Roman/OT:script=latn;languag
-e=dflt;mapping=tex-text;!
-Missing character: There is no 显 in font Times New Roman/OT:script=latn;languag
-e=dflt;mapping=tex-text;!
-Missing character: There is no 著 in font Times New Roman/OT:script=latn;languag
-e=dflt;mapping=tex-text;!
-Missing character: There is no 性 in font Times New Roman/OT:script=latn;languag
-e=dflt;mapping=tex-text;!
-Missing character: There is no 水 in font Times New Roman/OT:script=latn;languag
-e=dflt;mapping=tex-text;!
-Missing character: There is no 平 in font Times New Roman/OT:script=latn;languag
-e=dflt;mapping=tex-text;!
-Missing character: There is no 为 in font Times New Roman/OT:script=latn;languag
-e=dflt;mapping=tex-text;!
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\leavevmode@ifvmode' on input line 26.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 26.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\leavevmode@ifvmode' on input line 26.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 26.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 26.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mu' on input line 26.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 26.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mu' on input line 26.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 26.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\alpha' on input line 26.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 26.
-
-Missing character: There is no 或 in font Times New Roman/OT:script=latn;languag
-e=dflt;mapping=tex-text;!
-[8]
-Missing character: There is no 分 in font Times New Roman/OT:script=latn;languag
-e=dflt;mapping=tex-text;!
-Missing character: There is no 布 in font Times New Roman/OT:script=latn;languag
-e=dflt;mapping=tex-text;!
-Missing character: There is no 表 in font Times New Roman/OT:script=latn;languag
-e=dflt;mapping=tex-text;!
-Missing character: There is no ， in font Times New Roman/OT:script=latn;languag
-e=dflt;mapping=tex-text;!
-Missing character: There is no 分 in font Times New Roman/OT:script=latn;languag
-e=dflt;mapping=tex-text;!
-Missing character: There is no 布 in font Times New Roman/OT:script=latn;languag
-e=dflt;mapping=tex-text;!
-Missing character: There is no 函 in font Times New Roman/OT:script=latn;languag
-e=dflt;mapping=tex-text;!
-Missing character: There is no 数 in font Times New Roman/OT:script=latn;languag
-e=dflt;mapping=tex-text;!
-Missing character: There is no 为 in font Times New Roman/OT:script=latn;languag
-e=dflt;mapping=tex-text;!
-Missing character: There is no ， in font Times New Roman/OT:script=latn;languag
-e=dflt;mapping=tex-text;!
-Missing character: There is no 分 in font Times New Roman/OT:script=latn;languag
-e=dflt;mapping=tex-text;!
-Missing character: There is no 布 in font Times New Roman/OT:script=latn;languag
-e=dflt;mapping=tex-text;!
-Missing character: There is no 函 in font Times New Roman/OT:script=latn;languag
-e=dflt;mapping=tex-text;!
-Missing character: There is no 数 in font Times New Roman/OT:script=latn;languag
-e=dflt;mapping=tex-text;!
-Missing character: There is no 为 in font Times New Roman/OT:script=latn;languag
-e=dflt;mapping=tex-text;!
-
-Overfull \hbox (18.92345pt too wide) in paragraph at lines 56--62
-\TU/SimSun(0)/m/n/12.05 其 中，| $\OML/cmm/m/it/12.05 x[]$ \TU/SimSun(0)/m/n/12.05
- 为 文 物 $\OML/cmm/m/it/12.05 i$ \TU/SimSun(0)/m/n/12.05 风 化 后 化 学 成 分 $\OML/cmm/
-m/it/12.05 j$ \TU/SimSun(0)/m/n/12.05 的 含 量，|  且 服 从 正 态 分 布\TU/TimesNewRoman(0
-)/m/n/12.05 : $\OML/cmm/m/it/12.05 x[] \OMS/cmsy/m/n/12.05 ^^X \OML/cmm/m/it/12
-.05 N\OT1/cmr/m/n/12.05 (\OML/cmm/m/it/12.05 ^^V[]; ^^[[]\OT1/cmr/m/n/12.05 )[]
-[][][][][]^^H[]$\TU/TimesNewRoman(0)/m/n/12.05 ;
- []
-
-) [9] [10]
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
+put line 190.
+) (./para/Section_3_.tex) [8] [9]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\leavevmode@ifvmode' on input line 23.
@@ -2683,14 +2558,14 @@ Package fontspec Info: Font family 'FangSong(0)' created for font 'FangSong'
 Package caption Warning: Unused \captionsetup[sub] on input line 9.
 See the caption package documentation for explanation.
 
-[11]
+[10]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 32.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 32.
  (./!main.aux)
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 32.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 32.
 Package rerunfilecheck Info: File `!main.out' has not changed.
-(rerunfilecheck)             Checksum: C2E834AA1F5E1CB97E92BBB582582242;4453.
+(rerunfilecheck)             Checksum: 08D91EC6E17744E34E95296A4E7F7B90;3559.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -2700,12 +2575,12 @@ Package logreq Info: Writing requests to '!main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 41873 strings out of 479418
- 849062 string characters out of 5888104
- 1666988 words of memory out of 5000000
- 58613 multiletter control sequences out of 15000+600000
- 555604 words of font info for 186 fonts, out of 8000000 for 9000
+ 41818 strings out of 479418
+ 846103 string characters out of 5888104
+ 1667053 words of memory out of 5000000
+ 58559 multiletter control sequences out of 15000+600000
+ 548187 words of font info for 158 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 76i,13n,88p,1150b,4701s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 76i,13n,88p,1150b,4602s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on !main.xdv (11 pages, 99164 bytes).
+Output written on !main.xdv (10 pages, 93808 bytes).

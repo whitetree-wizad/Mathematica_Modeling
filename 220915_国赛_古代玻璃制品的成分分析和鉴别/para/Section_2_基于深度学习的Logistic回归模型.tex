@@ -174,3 +174,44 @@ Logistic回归模型作为一种广义的线性回归模型，常被用于数据
 
 
 % section section_基于深度学习的Logistic回归模型 (end)
+
+
+\section{统计规律} % (fold)
+\label{sec:统计规律}
+
+\textbf{题目1}中还要求结合玻璃的类型，分析有无风化时化学成分含量的统计规律，并预测其风化前的化学成分的变化。
+
+为了描述附件2中，在经受风化和未经受风化下，其表面化学成分含量呈现的规律，首先需要考察风化对表面化学成分的影响，即哪些表面化学成分在风化前后产生了显著差异。因此，本文对附件2中风化后取样点的14种化学成分与风化前取样点进行多因素方差分析。
+
+\subsection{多因素方差分析} % (fold)
+\label{sub:多因素方差分析}
+
+\begin{algorithm}[htb]
+  \caption{ Long short-term memory for out model.}
+  \label{alg:lstm}
+  \begin{algorithmic}[1]
+    \Require
+      从原始数据中获取原始的订购与供应数据;
+      从原始数据中挑取前一步筛选的44家供应商信息;
+    \Ensure
+      第$i$周第$j$家供应商的预测值$\psi_{i j}$;
+    \State 对数据的A、B、C分类，做均一化预处理;
+
+    \State 将数据按供应商拆分为一维时间序列数据;
+
+    \State 将一维时间序列数据先按时间窗口切分为二维数据，以同样的方法，再将每个时间窗口中的数据切分为特征向量;
+
+    \State 对升维后的数据做一次正态标准化缩放，保存缩放参数;
+
+    \State 将处理后的数据送入LSTM网络，训练完毕后，返回神经网络;
+
+    \State 每次预测1周，将预测的得到的1周数据重新送入神经网络，迭代指定此时以得到相应的预测步数;
+
+    \State 使用保存的缩放数据，将预测数据复原。\\
+    \Return $\psi_{i j}$.
+  \end{algorithmic}
+\end{algorithm}
+
+% subsection 多因素方差分析 (end)
+
+% section 统计规律 (end)
