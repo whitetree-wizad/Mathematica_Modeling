@@ -460,6 +460,8 @@ INPUT d:/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmbx5.tfm
 INPUT d:/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib5.tfm
 INPUT d:/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm
 INPUT d:/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmr5.tfm
+INPUT figure/准确率.eps
+INPUT figure/准确率.eps
 INPUT para/Section_3_.tex
 INPUT para/Section_3_.tex
 INPUT d:/texlive/2020/texmf-dist/tex/latex/listings/lstlang1.sty
