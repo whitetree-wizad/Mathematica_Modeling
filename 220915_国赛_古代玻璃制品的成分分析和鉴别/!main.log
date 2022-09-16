@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.10.20)  17 SEP 2022 01:52
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.10.20)  17 SEP 2022 02:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2490,25 +2490,66 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 [7]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\leavevmode@ifvmode' on input line 186.
+(hyperref)                removing `\leavevmode@ifvmode' on input line 172.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 186.
+(hyperref)                removed on input line 172.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\leavevmode@ifvmode' on input line 186.
+(hyperref)                removing `\leavevmode@ifvmode' on input line 172.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 186.
+(hyperref)                removed on input line 172.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\leavevmode@ifvmode' on input line 172.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 2.00876pt
+(hyperref)                removed on input line 172.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\leavevmode@ifvmode' on input line 172.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 2.00876pt
+(hyperref)                removed on input line 172.
+
+
+Overfull \hbox (19.35948pt too wide) in paragraph at lines 179--186
+ [][] 
+ []
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\leavevmode@ifvmode' on input line 202.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 2.00876pt
+(hyperref)                removed on input line 202.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\leavevmode@ifvmode' on input line 202.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 2.00876pt
+(hyperref)                removed on input line 202.
 
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 190.
-) (./para/Section_3_.tex) [8] [9]
+put line 208.
+) (./para/Section_3_.tex) [8]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\leavevmode@ifvmode' on input line 23.
@@ -2558,14 +2599,14 @@ Package fontspec Info: Font family 'FangSong(0)' created for font 'FangSong'
 Package caption Warning: Unused \captionsetup[sub] on input line 9.
 See the caption package documentation for explanation.
 
-[10]
+[9]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 32.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 32.
  (./!main.aux)
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 32.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 32.
 Package rerunfilecheck Info: File `!main.out' has not changed.
-(rerunfilecheck)             Checksum: 08D91EC6E17744E34E95296A4E7F7B90;3559.
+(rerunfilecheck)             Checksum: B26D8BFA5A1CE800D6E97562FF60677D;3691.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -2575,12 +2616,12 @@ Package logreq Info: Writing requests to '!main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 41818 strings out of 479418
- 846103 string characters out of 5888104
- 1667053 words of memory out of 5000000
- 58559 multiletter control sequences out of 15000+600000
+ 41820 strings out of 479418
+ 846130 string characters out of 5888104
+ 1667584 words of memory out of 5000000
+ 58561 multiletter control sequences out of 15000+600000
  548187 words of font info for 158 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 76i,13n,88p,1150b,4602s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 76i,13n,88p,1150b,4600s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on !main.xdv (10 pages, 93808 bytes).
+Output written on !main.xdv (9 pages, 95764 bytes).

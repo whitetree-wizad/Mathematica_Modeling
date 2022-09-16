@@ -169,7 +169,23 @@ Logistic回归模型作为一种广义的线性回归模型，常被用于数据
 \end{equation}
 反向传播各个样本每次训练时进行一次，达到循环次数后结束，并进行神经网络的测试，通过后投入预测使用.
 
+\subsubsection{模型评价} % (fold)
+\label{ssub:模型评价}
 
+\begin{table}[!htp]
+\setlength{\tabcolsep}{5mm}
+\centering
+\caption{方程中的变量}
+\begin{tabular}{cccccccc}
+\toprule
+                            & 玻璃类型   & 纹饰A    & 纹饰B    & R     & G      & B      & 常量      \\
+\midrule
+\multicolumn{1}{l}{$\beta$} & 10.955 & -0.621 & 13.097 & 1.470 & -0.286 & -1.372 & -1.834  \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% subsubsection 模型评价 (end)
 
 
 
@@ -185,6 +201,8 @@ Logistic回归模型作为一种广义的线性回归模型，常被用于数据
 
 \subsection{多因素方差分析} % (fold)
 \label{sub:多因素方差分析}
+
+方差分析常用于检验多种样品均值的差异是否具备统计学意义，在研究和生产中具备广泛的应用
 
 \begin{algorithm}[htb]
   \caption{ Long short-term memory for out model.}
