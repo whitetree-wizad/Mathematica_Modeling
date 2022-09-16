@@ -1,0 +1,176 @@
+\section{基于深度学习的Logistic回归模型（问题一）} % (fold)
+\label{sec:section_基于深度学习的Logistic回归模型}
+
+\subsection{模型的建立} % (fold)
+\label{sub:模型的建立}
+
+题目要求根据附件1，分析这些玻璃文物的表面风化与其玻璃类型、纹饰和颜色的关系。
+
+为了解决玻璃文物样品表面风化与否的二分类问题，本文建立了基于深度学习的Logistic回归模型。
+
+\subsubsection{数据标准化} % (fold)
+\label{ssub:数据标准化}
+
+整理附件1中数据，将在\ref{sub:附件1}中得到的风化状态、类型、纹饰和颜色的R、G、B值，记入样本特征矩阵$\boldsymbol{x}^{(i)}$
+
+\begin{equation}
+	\boldsymbol{x}^{(i)}=\left(\begin{array}{cccccc}x_{1}^{(i)}& x_{2}^{(i)}& x_{3}^{(i)}& x_{4}^{(i)}& x_{5}^{(i)}& x_{6}^{(i)}\end{array}\right).
+\end{equation}
+
+% subsubsection 数据标准化 (end)
+
+\subsubsection{建立多元线性回归模型} % (fold)
+\label{ssub:建立多元线性回归模型}
+
+本文首先从多元线性回归出发，建立玻璃文物的表面风化与否，与其玻璃类型、纹饰和颜色关系的线性回归模型。
+一般地，由于多元线性回归得到的实数值不能直接进行二分类，则需引入阶跃函数$f(x)$
+
+\begin{equation}
+f(x)=\left\{\begin{array}{l}
+0,\quad \beta_{0}+\sum_{j=1}^{6} \beta_{j} x_{j}^{(i)} \leqslant 0;\\
+1,\quad \beta_{0}+\sum_{j=1}^{6} \beta_{j} x_{j}^{(i)}>0.
+\end{array}\right.
+\end{equation}
+
+其基本思想是在空间中构造一个合理的超平面，把空间区域划分为两个子空间，每一种类别数据都在平面的某一侧，通过查看结果的划分区域，得到二分类的结果。
+但此阶跃函数在$o$点不连续且不可导，为此我们引入了Logistic回归模型。
+
+
+% subsubsection 建立广义线性规划模型 (end)
+
+\subsubsection{建立Logistic回归模型} % (fold)
+\label{ssub:建立logistic回归模型}
+
+Logistic回归模型作为一种广义的线性回归模型，常被用于数据分析、预测等领域。
+为了建立Logistic回归模型，我们首先以\ref{ssub:数据标准化}中的样本特征矩阵$\boldsymbol{x}^{(i)}$，确立线性自变量$z^{(i)}=\beta_0+\boldsymbol{\beta}x^{(i)}=\beta_0+\sum^6_{j=1}\beta_jx^{(i)}_j$。
+
+区别于\ref{ssub:建立多元线性回归模型}中使用阶跃函数$f(x)$，本模型借助阶跃函数的平滑版本，即Sigmoid函数，
+
+\begin{equation}
+	a^{(i)}=f_{\boldsymbol{\beta}}\left(\boldsymbol{x}^{(i)}\right)=\frac{1}{1+e^{-z^{(i)}}}=\frac{1}{1+e^{-\left(\beta_{0}+\sum_{j=1}^{6} \beta_{j} x_{j}^{(i)}\right)}}.
+\end{equation}
+其中，$\boldsymbol{\beta}=(\beta_1 \beta_2\dots \beta_6)^T$为连接权，即广义线性模型中自变量的参数。
+
+通过Sigmoid函数将输入数据数据压缩至0至1之间，以确定输入数据属于铅钡玻璃或高钾玻璃（即0或1）可能性。
+令$y^{(i)}$服从$\pi_{i}=f_{\boldsymbol{\beta}}\left(\boldsymbol{x}^{(i)}\right)$的0$\textendash$1型分布，概率分布函数为
+
+\begin{equation}
+	P\left\{y \mid \boldsymbol{x}^{(i)} ; \boldsymbol{\beta}\right\}=f_{\boldsymbol{\beta}}\left(\boldsymbol{x}^{(i)}\right)^{y^{(i)}}\left(1-f_{\boldsymbol{\beta}}\left(\boldsymbol{x}^{(i)}\right)\right)^{1-y^{(i)}},\quad y=0 \text { 或 } 1.
+\end{equation}
+当$y=0$时，$P\left\{y=0 \mid \boldsymbol{x}^{(i)} ; \boldsymbol{\beta}\right\}=1-f_{\boldsymbol{\beta}}$，记为$1-p$；
+当$y=1$时，$P\left\{y=1 \mid \boldsymbol{x}^{(i)} ; \boldsymbol{\beta}\right\}=f_{\boldsymbol{\beta}}$，记为$p$。
+
+因此，由上式可以得到
+
+\begin{equation}
+	\ln \frac{p}{1-p}=\ln \frac{P\left\{y=1 \mid \boldsymbol{x}^{(i)}\right\}}{P\left\{y=0 \mid \boldsymbol{x}^{(i)}\right\}}=\beta_{0}+\sum_{j=1}^{6} \beta_{j} x_{j}^{(i)}.
+\end{equation}
+
+上式即为Logistic回归模型，式左是与概率相关的对数值，故无法使用通常的最小二乘法拟合未知参数向量$\boldsymbol{\beta}$，而应采用极大似然估计法。
+
+% subsubsection 建立logistic回归模型 (end)
+
+\subsubsection{构造似然函数} % (fold)
+\label{ssub:构造似然函数}
+
+数据集中每个样本点都是相互独立的，则联合概率就是各样本点事件发生的概率乘积，故似然函数可以表示为
+
+\begin{equation}
+	L(\boldsymbol{\beta})=\prod_{i=1}^{58} P\left\{y \mid \boldsymbol{x}^{(i)} ; \boldsymbol{\beta}\right\}=\prod_{i=1}^{58}\left[f_{\boldsymbol{\beta}}\left(\boldsymbol{x}^{(i)}\right)^{y^{(i)}}\left(1-f_{\boldsymbol{\beta}}\left(\boldsymbol{x}^{(i)}\right)\right)^{1-y^{(i)}}\right].
+\end{equation}
+
+对于此似然函数，无法求出当$L(\boldsymbol{\beta})$最大时，拟合参数$\boldsymbol{\beta}$的解析解。
+故转而尝试求其数值解，本文在这里采用基于最速下降法的神经网络算法对拟合参数进行求解。
+
+% subsubsection 构造似然函数 (end)
+
+% \subsubsection{运用梯度下降求解模型} % (fold)
+% \label{ssub:运用梯度下降求解模型}
+
+% 为了便于求解，本文对似然函数做对数处理，并取相反数得到损失函数$\mathcal{L}$
+
+% \begin{equation}
+% 	\mathcal{L}(\boldsymbol{\beta})=\sum_{i=1}^{58}\left[y^{(i)} \ln f_{\boldsymbol{\beta}}\left(\boldsymbol{x}^{(i)}\right)+\left(1-y^{(i)}\right) \ln \left(1-f_{\boldsymbol{\beta}}\left(\boldsymbol{x}^{(i)}\right)\right)\right]
+% \end{equation}
+
+% subsubsection 运用梯度下降求解模型 (end)
+
+% subsection 模型的建立 (end)
+
+\subsection{模型的求解}
+
+神经网络的本质即为运筹，考虑到梯度下降算法常作为神经网络反向传播时使用的最优化算法，本文希望通过建立神经网络优化数值方法对于参数向量$\boldsymbol{\beta}$的拟合效果.
+
+\begin{figure}[!htp]
+	\includegraphics[width=16cm]{figure/node.png}
+	\caption{神经网络结构示意图}
+\end{figure}
+
+\subsubsection{神经网络模型结构}
+
+搭建如图1所示的神经网络，需要注意的是，图中只显示了每个输入及其权重如何连接到输出，而隐去了偏置的值.在图1所示的神经网络中，输入为$\boldsymbol{x^{(i)}}$，因此输入层中的输入数（或称为特征维度）为6.网络的输出为$P$，预测文物$i$表面风化的可能性，因此输出层的输出数是1.特别地，计算神经元只有一个，不仅为单层神经网络，且为全连接层.
+
+\subsubsection{连接权}
+
+\begin{equation}
+	\boldsymbol{\beta}= \left(\begin{array}{cccc}
+     \beta_0 & \beta_1 & \cdots & \beta_6
+   \end{array}\right)^{\mathrm{T}}.
+\end{equation}
+其不仅在广义线性回归模型中作为线性自变量（预测部分）的系数，也为神经网络中输入的权重，是需要拟合的参数向量.在神经网络中，也作为最优化算法的决策变量，使得目标函数交叉熵取得最小值.
+
+\subsubsection{网络输入}
+
+\begin{equation}
+	z^{(i)} = \beta_0 + \sum^6_{j = 1} \beta_j x^{(i)}_j.
+\end{equation}
+在广义线性回归模型中作为线性自变量，也称为线性预测部分.在深度学习中，本质是一个多元函数，将$\boldsymbol{x^{(i)}}$和$\boldsymbol{\beta}$经过线性组合降维成实数$z^{(i)}$传入激活函数.
+
+\subsubsection{激活函数}
+
+激活函数也称激励函数、活化函数，用来执行对神经元所获得的网络输入的变换，S形函数是常见的一种.其为一元函数，可以将输入的自变量为$z^{(i)}$数据压缩至0到1的范围内.公式为
+\begin{equation}
+	a^{(i)} = \sigma (z^{(i)}) = \frac{1}{1 + e^{- z}} = \frac{1}{1 + e^{-
+   \left( \beta_0 + \sum^6_{j = 1} \beta_j x^{(i)}_j \right)}} =
+   f_{\boldsymbol{\beta}} (\boldsymbol{x^{(i)}}).
+\end{equation}
+可知Logistic回归中的Sigmoid函数即为$\sigma$和$z$的复合函数.
+
+\subsubsection{损失函数}
+
+回忆化学中关于酸碱度pH值的概念，算子p表示取对数值的相反数.令损失函数
+\begin{equation}
+	\mathcal{L} (\boldsymbol{\beta}) = \mathrm{p} \textit{L$(\boldsymbol{\beta})$}
+   = - \sum_{i = 1}^{58} [y^{(i)} \ln f_{\boldsymbol{\beta}}
+   (\boldsymbol{x^{(i)}}) + (1 - y^{(i)}) \ln (1 - f_{\boldsymbol{\beta}}
+   (\boldsymbol{x^{(i)}}))].
+\end{equation}
+恰好是二分类问题常用的交叉熵损失函数.由此可见，似然函数和损失函数具有同一性，最值同时取得.
+
+\subsubsection{最速下降法}
+
+最速下降法以负梯度方向作为极小化算法的下降方向，因此需要计算损失函数关于决策变量的偏导数.
+
+后文使用复合函数的链式求导法则，先给出
+\begin{equation}
+	\frac{\mathrm{d} \mathcal{L}}{\mathrm{d} a^{(i)}} = -
+   \frac{y^{(i)}}{a^{(i)}} + \frac{1 - y^{(i)}}{1 - a^{(i)}}.
+\end{equation}
+进而在每一次神经网络训练时，计算
+\begin{equation}
+	\frac{\partial \mathcal{L}}{\partial \beta_j} = x^{(i)}_j \frac{\mathrm{d}
+   \mathcal{L}}{\mathrm{d}z^{(i)}} = x^{(i)}_j \frac{\mathrm{d}
+   \mathcal{L}}{\mathrm{d} a^{(i)}} \frac{\mathrm{d} a^{(i)}}{\mathrm{d}z^{(i)}}
+   = x^{(i)}_j (a^{(i)} - y^{(i)}).
+\end{equation}
+并更新决策变量
+\begin{equation}
+	\beta_{j}:=\beta_{j}-\alpha \frac{\partial \mathcal{L}}{\partial \beta_{j}}, \quad \text { 其中 } \alpha \text { 为学习率 }.
+\end{equation}
+反向传播各个样本每次训练时进行一次，达到循环次数后结束，并进行神经网络的测试，通过后投入预测使用.
+
+
+
+
+
+% section section_基于深度学习的Logistic回归模型 (end)

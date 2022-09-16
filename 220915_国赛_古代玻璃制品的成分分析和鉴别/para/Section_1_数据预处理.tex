@@ -1,0 +1,110 @@
+\section{数据预处理} % (fold)
+\label{sec:数据预处理}
+
+\subsection{附件1} % (fold)
+\label{sub:附件1}
+
+% subsection 附件1 (end)
+
+\subsubsection{处理缺失值} % (fold)
+\label{ssub:处理缺失值}
+
+首先，附件1中提供的某些文物数据在颜色项存在缺失，这可能是由于文物出土条件较差，导致颜色已经无法辨别。
+由于此缺失项无益于回归模型的建立，故去除所有包含缺失值的条目（文物编号为19、40、48、58）。
+
+% subsubsection 处理缺失值 (end)
+
+\subsubsection{变量二值化} % (fold)
+\label{ssub:变量二值化}
+
+为了便于数学描述，本文构建了二值变量$y^{(i)}$,$x^{(i)}_1$,$x^{(i)}_2$,$x^{(i)}_3$，以表示样品$i$的表面风化与否，类型和纹饰状态。
+
+\begin{enumerate}
+\item 风化状态
+\begin{equation}
+y^{(i)}=\left\{\begin{array}{l}
+1, \quad \text { 文物 } i \text { 风化 }; \\
+0, \quad \text { 文物 } i \text { 无风化 }.
+\end{array}\right.
+\end{equation}
+
+\item 类型
+\begin{equation}
+	x_{1}^{(i)}=\left\{\begin{array}{l}
+1, \quad \text { 文物 } i \text { 样品类型为高钾玻璃 }; \\
+0, \quad \text { 文物 } i \text { 样品类型为铅钡玻璃 }.
+\end{array}\right.
+\end{equation}
+
+\item 纹饰
+\begin{equation}
+	x_{2}^{(i)}=\left\{\begin{array}{l}
+1,\quad \text { 文物 } i \text { 纹饰为A };  \\
+0,\quad \text { 文物 } i \text { 纹饰不为A }.
+\end{array}\right.
+\end{equation}
+
+\begin{equation}
+	x_{3}^{(i)}=\left\{\begin{array}{l}
+1,\quad \text { 文物 } i \text { 纹饰为B};  \\
+0,\quad \text { 文物 } i \text { 纹饰不为B}.
+\end{array}\right.
+\end{equation}
+
+文物$i$共有3三种纹饰状态，即A、B、C，若设置三个二值变量，则会导致完全多重共线性，从而落入虚拟变量陷阱\cite{伍德里奇2014计量经济学导论}。
+故本文使用上述两个二值变量以表示以上三种状态，例如，当文物$i$的纹饰为C时，此时$x_{2}^{(i)}$、$x_{2}^{(i)}$即表示为0。
+从附件1中44件文物样品的纹饰分布来看，纹饰为C的样品共有28件，较其他两种纹饰更多，因此可以将$x_{2}^{(i)}$、$x_{2}^{(i)}$的初始值均设为0，当纹饰为A、C时，则令其对应的二值变量取1。
+
+
+
+\end{enumerate}
+
+
+
+% subsubsection 变量虚拟化 (end)
+
+\subsubsection{颜色RGB标准化} % (fold)
+\label{ssub:颜色RGB标准化}
+
+样品的颜色受到多种因素影响，呈现出的色彩各异。
+同样地，若两个样品的化学组分和结构相似，表现出的色彩差异也较小（如深绿与浅绿）。
+因此，直接将颜色当作独立的分类变量并不妥当，本文将色彩量化为RGB值以体现颜色之间的差异程度，并据此建立后文模型。
+
+\begin{table}[!htp]
+\caption{\bf RGB值对应表}
+\setlength{\tabcolsep}{7mm}
+\centering
+\begin{tabular}{clccc}
+\toprule
+颜色~ &  & R   & G   & B    \\
+\midrule
+蓝绿  &  & 0   & 131 & 143  \\
+深绿  &  & 0   & 100 & 0    \\
+深蓝  &  & 18  & 18  & 110  \\
+浅蓝  &  & 135 & 206 & 250  \\
+浅绿  &  & 204 & 224 & 153  \\
+紫   &  & 143 & 7   & 131  \\
+绿   &  & 0   & 255 & 0    \\
+黑   &  & 0   & 0   & 0    \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+由于RGB数据量级与其他数据差距较大，因此对其进行正态标准化
+
+\begin{equation}
+	x_{j}^{(i)}=\frac{X_{j}^{(i)}-\mu_{j}}{\sigma_{j}}.
+\end{equation}
+其中，$X_j^{(i)}(j=4,5,6)$分别对应文物$i$颜色RGB值的三个分量，$\mu_j$及$\sigma_j$为对应分量的期望和标准差。
+
+\begin{equation}
+	\begin{array}{c}
+\mu_{j}=\frac{1}{54} \sum_{i=1}^{54} X_{j}^{(i)};\\
+\sigma_{j}=\sqrt{\frac{1}{53} \sum_{i=1}^{54}\left[X_{j}^{(i)}-\mu_{j}\right]^{2}}; \\
+\left(\begin{array}{ccc} x_{4}^{(i)}& x_{5}^{(i)}& x_{6}^{(i)}\end{array}\right)=\left(\begin{array}{ccc}\frac{R^{(i)}-\mu_{4}}{\sigma_{4}}& \frac{G^{(i)}-\mu_{5}}{\sigma_{5}} &\frac{B^{(i)}-\mu_{6}}{\sigma_{6}}\end{array}\right)
+\end{array}
+\end{equation}
+
+% subsubsection 颜色rgb标准化 (end)
+
+% section 数据预处理 (end)
