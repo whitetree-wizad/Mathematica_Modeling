@@ -56,6 +56,40 @@
       \range{pages}{1}
       \keyw{伍德里奇2014计量经济学导论}
     \endentry
+    \entry{spss}{article}{}
+      \name{author}{1}{}{%
+        {{hash=e6d61dcbdc09170dcb2f91699f695852}{%
+           family={李瑞歌;张梦娇;吴璐璐;吕东灿;史力军;安万凯;赵仲麟;袁超;},
+           familyi={李\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {chinese}%
+      }
+      \strng{namehash}{e6d61dcbdc09170dcb2f91699f695852}
+      \strng{fullhash}{e6d61dcbdc09170dcb2f91699f695852}
+      \strng{bibnamehash}{e6d61dcbdc09170dcb2f91699f695852}
+      \strng{authorbibnamehash}{e6d61dcbdc09170dcb2f91699f695852}
+      \strng{authornamehash}{e6d61dcbdc09170dcb2f91699f695852}
+      \strng{authorfullhash}{e6d61dcbdc09170dcb2f91699f695852}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{本文以两因素完全随机有重复的试验为例,阐述了用spss软进行方差分析的详细过程,包括方差分析的原理,数据的输入、变异来源的分析等,并以一个经典的化学实验为例进行了分析,演示了其spss操作过程,为初学者呈现简单明了、操作性强的方差分析的全过程,最后对方差分析注意事项进行分析,为科技工作者使用spss软进方差分析提供参考。}
+      \field{journaltitle}{农业网络信息}
+      \field{langid}{english}
+      \field{lansortorder}{1}
+      \field{number}{04}
+      \field{title}{基于spss软件多因素方差分析在化学实验中的应用}
+      \field{usera}{J}
+      \field{userd}{chinese}
+      \field{userf}{chinese}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \field{pages}{22\bibrangedash 26}
+      \range{pages}{5}
+      \keyw{spss软件;多因素;方差分析;化学实验;教学}
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
